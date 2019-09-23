@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zkhy.community">
+
+    <!-- Normal Permissions 不需要运行时注册 -->
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+    <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 需要运行时注册的权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 更改设置 -->
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".view.comm.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_App_Start">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Home -->
+        <activity
+            android:name=".view.comm.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.AppClassActivity"
+            android:screenOrientation="portrait" />
+        <!-- 便民 -->
+        <activity
+            android:name=".view.main.bm.BmIndexOrgListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmIndexDeptFunListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmIndexDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHomeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleAllowanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmOrderHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmOrderDateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmOrderResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleBody1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleBody2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleAllowanceSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleAllowanceNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleBodyNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmOrderSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmIDCardUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmFileUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.SmartParkListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmComplainHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleProgressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.LifePayHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.lm.LmNearbyActiveListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.lm.LmStadiumListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.lm.LmStadiumDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zkhy.comm.plugin.activity.WebPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.lm.LmNearbyActiveDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmLawHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmLawQAListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmLawFirmListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmLawConsultAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmLawConsultHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmLawPopularizingDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmPoliceStationListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.ConvenienceQueryHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.ConvenienceQueryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleLiveSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandlePoliticalSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleChildrenAgeSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleHouseholdRegisterSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleRelationshipSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleDisabilityCertificateHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleDisabilityCertificateSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.RegisterActivity"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.main.dj.PartyCostHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.PartyCostPayInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.PartyCostPayDescribeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.km.HouseDocHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.km.HouseDocQAListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.WishHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.WishAllListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.WishFromMeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.WishCreateByMeListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.km.HouseDocQAAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.WishDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmLawConsultDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.km.HouseDocQAHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.TownListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.AreaCountryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleProgressResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.WishAddActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zkhy.library.base.commInfoEdit.InfoEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.am.AmLawConsultReplyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".view.main.km.DocConsultDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.km.DocConsultReplyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+
+        <!-- 图片选择 -->
+        <activity
+            android:name="com.sinothk.image.selector.PhotoPickerActivity"
+            android:configChanges="keyboardHidden|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeSelectorImage" />
+        <activity
+            android:name="com.sinothk.image.selector.PhotoPreviewActivity"
+            android:configChanges="keyboardHidden|locale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeSelectorImage" />
+        <activity
+            android:name=".view.main.dj.AppPhotoPreviewActivity"
+            android:configChanges="keyboardHidden|locale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.AddressStreetListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.AddressCommunityListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.ClaimUserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.LoveAllListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmOrderTakeFileListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.OrderHistoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleHistoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleDetailsFilesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.zm.LoveHeartDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.mine.UserInfoSimpleEditActivity"
+            android:clipToPadding="false"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.main.am.AmLawFirmMapActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.main.am.AmPoliceStationMapActivity" />
+
+        <!-- ============================= 百度 ==================================== -->
+        <!-- 开发者申请的key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="acb5cff7ae68e01ca5935ee53e0bcb8f" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <!-- <meta-data -->
+        <!-- android:name="com.amap.api.v2.apikey" -->
+        <!-- android:value="2bef576587ffbd1f1f4ce25dcf02792c" /> -->
+        <!-- ============================= 百度 ==================================== -->
+
+
+        <!-- 共享信息 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/img_paths" />
+        </provider>
+
+        <activity
+            android:name=".view.comm.PwdEdit1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.PwdEdit2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.PwdEdit3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.MeetClassHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.MeetClassForMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.MeetClassForAllActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.km.DoctorOrderListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.MeetSummaryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.MeetingDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleEmploymentPermitSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleZeroEmploymentSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.BmHandleEmploymentDifficultySubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.zkhy.comm.plugin.activity.KeyValueListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.MeetReadStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.MeetAttendInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.dj.MeetClassFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.m3.BmHandleThreeChildSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.m3.BmHandleSpecialObjHelpSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.m3.BmHandleMedicalAssistanceSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.m3.BmHandleTempAssistanceSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.m3.BmHandleDifficultySupportSubmitActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.main.bm.m3.BmHandleCitySafeguardSubmitActivity" />
+        <activity
+            android:name=".view.photos.PhotosCreatorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.photos.MyShotPhotoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.photos.MyHandlePhotoListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.photos.ShotPhotoDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.photos.ShotPhotoHandleDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.photos.ShotPhotoHandleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.FileUploadCommActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.IDCardUploadActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.zkhy.comm.plugin.activity.WebPageTempActivity"
+            android:hardwareAccelerated="true" />
+
+        <activity
+            android:name=".view.main.am.ImpeachCreateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.am.ImpeachHistoryListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.am.ImpeachDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.community.GetVerificationCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.community.AddressList1Activity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.community.GridReviewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.community.GridReviewDetail1Activity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.community.GridReviewDetail2Activity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.community.PersonalInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.community.PersonalInfoDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.community.InputVerificationCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.bm.ChildLdrkhySubmit"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.bm.ChildCxjsSubmit"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.bm.OtherHouseholdRegisterSubmit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.OtherDeathSubmit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.bm.OtherPoorFamilySubmit"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.dj.PropagandaSysListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.dj.PropagandaSysDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.NoticeMsgListActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.comm.NoticeMsgDetailActivity" />
+
+        <activity
+            android:name=".view.main.dw.DWOpenActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.dw.DWOpenDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.LocationCommunityListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.comm.LocationStreetListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.am.SafeWorkHomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.ts.ComplaintHistoryListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.ts.ComplaintCreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.main.ts.ComplaintDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.am.AmLawyerDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.km.DocDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.mk.MkMonitoringSystemActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.mk.MkMonitoringSystemListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.mk.MkMonitoringSystem2ListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.mk.MkMonitoringSystemDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.mk.MkPersonLocationListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.mk.MkPersonLocationDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.mk.MkPersonShowActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

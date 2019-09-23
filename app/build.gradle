@@ -8,8 +8,8 @@ android {
         applicationId "com.zkhy.fenggang.community"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 100
-        versionName "1.1.8"
+        versionCode 1101
+        versionName "1.1.01"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true

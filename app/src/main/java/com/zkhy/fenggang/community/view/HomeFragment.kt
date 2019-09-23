@@ -20,6 +20,7 @@ import com.zkhy.fenggang.community.view.main.AppClassActivity
 import com.zkhy.fenggang.community.view.comm.NoticeMsgListActivity
 import com.zkhy.fenggang.community.view.main.am.AmLawHomeActivity
 import com.zkhy.fenggang.community.view.main.am.AmPoliceStationMapActivity
+import com.zkhy.fenggang.community.view.main.am.ImpeachCreateActivity
 import com.zkhy.fenggang.community.view.main.bm.*
 import com.zkhy.fenggang.community.view.main.dj.PartyCostHomeActivity
 import com.zkhy.fenggang.community.view.main.dj.MeetClassHomeActivity
@@ -144,7 +145,7 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
         noticeTxtView.startWithList(noticeList)
         noticeTxtView.setOnItemClickListener { _, _ ->
             IntentUtil.openActivity(activity, PropagandaSysListActivity::class.java)
-                .start()
+                    .start()
         }
     }
 
@@ -221,17 +222,17 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
                 val needTip: Boolean = DataCache.getNeedTipInputUserInfo()
                 if (needTip) {
                     CommonDialog.Builder(activity)
-                        .setTitle("重要提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
-                        .setPositiveButton("确定") {
+                            .setTitle("重要提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
+                            .setPositiveButton("确定") {
 
-                            IntentUtil.openActivity(activity, UserInfoSimpleEditActivity::class.java)
-                                .putIntExtra("fromType", 0)
-                                .start()
+                                IntentUtil.openActivity(activity, UserInfoSimpleEditActivity::class.java)
+                                        .putIntExtra("fromType", 0)
+                                        .start()
 
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            }.setNegativeButton("取消") {
+                            }.show()
                 } else {
                     IntentUtil.openActivity(activity, BmHomeListActivity::class.java).start()
                 }
@@ -241,14 +242,14 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
             banLiJinDuItem -> {
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(activity)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(activity, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(activity, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
@@ -265,14 +266,14 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
 
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(activity)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(activity, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(activity, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
@@ -293,14 +294,14 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
 
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(activity)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(activity, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(activity, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
@@ -315,14 +316,14 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
 
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(activity)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(activity, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(activity, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
@@ -331,13 +332,13 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
 
             dj2Item -> {// 宣传平台
                 IntentUtil.openActivity(activity, PropagandaSysListActivity::class.java)
-                    .start()
+                        .start()
             }
 
             djMoreItem -> {
                 IntentUtil.openActivity(activity, AppClassActivity::class.java)
-                    .putStringExtra("BizType", AppClassActivity.DJ)
-                    .start()
+                        .putStringExtra("BizType", AppClassActivity.DJ)
+                        .start()
             }
 
             // ======= 便民
@@ -351,47 +352,49 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
                 val needTip: Boolean = DataCache.getNeedTipInputUserInfo()
                 if (needTip) {
                     CommonDialog.Builder(activity)
-                        .setTitle("重要提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
-                        .setPositiveButton("确定") {
+                            .setTitle("重要提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
+                            .setPositiveButton("确定") {
 
-                            IntentUtil.openActivity(activity, UserInfoSimpleEditActivity::class.java)
-                                .putIntExtra("fromType", 0)
-                                .start()
+                                IntentUtil.openActivity(activity, UserInfoSimpleEditActivity::class.java)
+                                        .putIntExtra("fromType", 0)
+                                        .start()
 
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            }.setNegativeButton("取消") {
+                            }.show()
                 } else {
                     IntentUtil.openActivity(activity, BmHomeListActivity::class.java).start()
                 }
             }
             bm03Item -> {
-                IntentUtil.openActivity(activity, ConvenienceQueryHomeActivity::class.java).start()
-//                IntentUtil.openActivity(activity, BmOrderHomeActivity::class.java).start()
+                IntentUtil.openActivity(activity, WebPageActivity::class.java)
+                        .putStringExtra("webUrl", "http://yxy.zy20.com/hosreg.php?orgid=1")
+                        .putStringExtra("webTitle", "预约挂号")
+                        .start()
             }
 
             bmMoreItem -> {
                 IntentUtil.openActivity(activity, AppClassActivity::class.java)
-                    .putStringExtra("BizType", AppClassActivity.BM)
-                    .start()
+                        .putStringExtra("BizType", AppClassActivity.BM)
+                        .start()
             }
             // 安民
             am01Item -> {
                 val needTip: Boolean = DataCache.getNeedTipInputUserInfo()
                 if (needTip) {
                     CommonDialog.Builder(activity)
-                        .setTitle("重要提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
-                        .setPositiveButton("确定") {
+                            .setTitle("重要提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
+                            .setPositiveButton("确定") {
 
-                            IntentUtil.openActivity(activity, UserInfoSimpleEditActivity::class.java)
-                                .putIntExtra("fromType", 0)
-                                .start()
+                                IntentUtil.openActivity(activity, UserInfoSimpleEditActivity::class.java)
+                                        .putIntExtra("fromType", 0)
+                                        .start()
 
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            }.setNegativeButton("取消") {
+                            }.show()
                 } else {
                     IntentUtil.openActivity(activity, AmLawHomeActivity::class.java).start()
                 }
@@ -400,20 +403,35 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
                 IntentUtil.openActivity(activity, AmPoliceStationMapActivity::class.java).start()
             }
             am03Item -> {
+                if (!DataCache.isAutoLogin()) {
+                    CommonDialog.Builder(activity)
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(activity, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
+                    return
+                }
+
+                IntentUtil.openActivity(activity, ImpeachCreateActivity::class.java).start()
+
 //                IntentUtil.openActivity(activity, WebPageActivity::class.java)
 //                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/yjyl")
-//                    .putStringExtra("webTitle", "应急演练")
-//                    .start()
-
-                val info = AppUtil.startOtherApp(activity, "com.howjoy.watchfield", null)
-                if (!TextUtils.isEmpty(info)) {
-                    ToastUtil.show("智慧门禁应用未安装")
-                }
+//                   .putStringExtra("webTitle", "应急演练")
+//                   .start()
+//
+//                val info = AppUtil.startOtherApp(activity, "com.howjoy.watchfield", null)
+//                if (!TextUtils.isEmpty(info)) {
+//                    ToastUtil.show("智慧门禁应用未安装")
+//                }
             }
             amMoreItem -> {
                 IntentUtil.openActivity(activity, AppClassActivity::class.java)
-                    .putStringExtra("BizType", AppClassActivity.AM)
-                    .start()
+                        .putStringExtra("BizType", AppClassActivity.AM)
+                        .start()
             }
 
             // ======乐民
@@ -427,18 +445,15 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
 
             lm03Item -> {
                 IntentUtil.openActivity(activity, WebPageActivity::class.java)
-                    .putStringExtra(
-                        "webUrl",
-                        "https://wk3.bookan.com.cn/?id=20730&token=&productId=5!#/book/596"
-                    )//http://cbm_zunyihuichuan.3eol.com.cn/Mobile
-                    .putStringExtra("webTitle", "全民阅读")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/whzx")
+                        .putStringExtra("webTitle", "文化中心")
+                        .start()
             }
 
             lmMoreItem -> {
                 IntentUtil.openActivity(activity, AppClassActivity::class.java)
-                    .putStringExtra("BizType", AppClassActivity.LM)
-                    .start()
+                        .putStringExtra("BizType", AppClassActivity.LM)
+                        .start()
             }
             // == 康民
             km0Item -> {
@@ -454,18 +469,18 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
             }
             km2Item -> {
                 IntentUtil.openActivity(activity, WebPageActivity::class.java)
-                    .putStringExtra(
-                        "webUrl",
-                        "http://mp.weixin.qq.com/mp/homepage?__biz=MzU0ODg4MjA3MQ==&hid=3&sn=17601cc040a52aa85e02ac5fdfd9c327&scene=18#wechat_redirect"
-                    )
-                    .putStringExtra("webTitle", "医疗保险")
-                    .start()
+                        .putStringExtra(
+                                "webUrl",
+                                "http://mp.weixin.qq.com/mp/homepage?__biz=MzU0ODg4MjA3MQ==&hid=3&sn=17601cc040a52aa85e02ac5fdfd9c327&scene=18#wechat_redirect"
+                        )
+                        .putStringExtra("webTitle", "医疗保险")
+                        .start()
             }
 
             kmMoreItem -> {
                 IntentUtil.openActivity(activity, AppClassActivity::class.java)
-                    .putStringExtra("BizType", AppClassActivity.KM)
-                    .start()
+                        .putStringExtra("BizType", AppClassActivity.KM)
+                        .start()
             }
 
             // 助民
@@ -473,31 +488,31 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
 
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(activity)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(activity, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(activity, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
                 val needTip: Boolean = DataCache.getNeedTipInputUserInfo()
                 if (needTip) {
                     CommonDialog.Builder(activity)
-                        .setTitle("重要提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
-                        .setPositiveButton("确定") {
+                            .setTitle("重要提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
+                            .setPositiveButton("确定") {
 
-                            IntentUtil.openActivity(activity, UserInfoSimpleEditActivity::class.java)
-                                .putIntExtra("fromType", 0)
-                                .start()
+                                IntentUtil.openActivity(activity, UserInfoSimpleEditActivity::class.java)
+                                        .putIntExtra("fromType", 0)
+                                        .start()
 
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            }.setNegativeButton("取消") {
+                            }.show()
                 } else {
                     IntentUtil.openActivity(activity, WishHomeActivity::class.java).start()
                 }
@@ -509,15 +524,15 @@ class HomeFragment : MainBaseFragment(), View.OnClickListener {
 
             zm03Item -> {
                 IntentUtil.openActivity(activity, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://www.juxianw.net/")
-                    .putStringExtra("webTitle", "创业就业")
-                    .start()
+                        .putStringExtra("webUrl", "http://www.juxianw.net/")
+                        .putStringExtra("webTitle", "创业就业")
+                        .start()
             }
 
             zmMoreItem -> {
                 IntentUtil.openActivity(activity, AppClassActivity::class.java)
-                    .putStringExtra("BizType", AppClassActivity.ZM)
-                    .start()
+                        .putStringExtra("BizType", AppClassActivity.ZM)
+                        .start()
             }
             // ============ TEMP
         }

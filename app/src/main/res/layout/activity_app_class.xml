@@ -234,7 +234,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="@dimen/dp_6"
-                        android:text="安民服务"
+                        android:text="社区治理"
                         android:textSize="@dimen/sp_12" />
                 </LinearLayout>
 
@@ -276,9 +276,23 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/am7Item"
+                        android:id="@+id/am6Item"
                         style="@style/fragment_more_list_item_layout"
                         android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/am_xf07" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="网上信访" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am7Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
 
                         <ImageView
                             style="@style/fragment_home_list_item_icon"
@@ -305,7 +319,8 @@
 
                     <LinearLayout
                         android:id="@+id/am3Item"
-                        style="@style/fragment_more_list_item_layout">
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
 
                         <ImageView
                             style="@style/fragment_home_list_item_icon"
@@ -320,21 +335,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:id="@+id/am6Item"
-                        style="@style/fragment_more_list_item_layout"
-                        android:visibility="visible">
-
-                        <ImageView
-                            style="@style/fragment_home_list_item_icon"
-                            android:src="@drawable/am_xf07" />
-
-                        <TextView
-                            style="@style/fragment_home_list_item_txt"
-                            android:text="网上信访" />
-                    </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:id="@+id/am8Item"
@@ -423,7 +425,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="@dimen/dp_6"
-                        android:text="便民服务"
+                        android:text="基本公共服务"
                         android:textSize="@dimen/sp_12" />
                 </LinearLayout>
 
@@ -465,6 +467,32 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:id="@+id/km0Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/km_icon01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="预约挂号" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/km1Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/km_icon02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="家庭医生" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:id="@+id/bm2Item"
                         style="@style/fragment_more_list_item_layout"
                         android:visibility="gone">
@@ -481,7 +509,7 @@
                     <LinearLayout
                         android:id="@+id/bm12Item"
                         style="@style/fragment_more_list_item_layout"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <ImageView
                             style="@style/fragment_home_list_item_icon"
@@ -509,7 +537,7 @@
                     <LinearLayout
                         android:id="@+id/bm11Item"
                         style="@style/fragment_more_list_item_layout"
-                        android:visibility="visible">
+                        android:visibility="gone">
 
                         <ImageView
                             style="@style/fragment_home_list_item_icon"
@@ -527,8 +555,22 @@
                     android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:id="@+id/bm4Item"
+                        android:id="@+id/km2Item"
                         style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/km_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="心理咨询" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm4Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
 
                         <ImageView
                             style="@style/fragment_home_list_item_icon"
@@ -541,7 +583,8 @@
 
                     <LinearLayout
                         android:id="@+id/bm5Item"
-                        style="@style/fragment_more_list_item_layout">
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
 
                         <ImageView
                             style="@style/fragment_home_list_item_icon"
@@ -555,7 +598,7 @@
                     <LinearLayout
                         android:id="@+id/bm6Item"
                         style="@style/fragment_more_list_item_layout"
-                        android:visibility="visible">
+                        android:visibility="invisible">
 
                         <ImageView
                             style="@style/fragment_home_list_item_icon"
@@ -569,7 +612,7 @@
                     <LinearLayout
                         android:id="@+id/bm7Item"
                         style="@style/fragment_more_list_item_layout"
-                        android:visibility="visible">
+                        android:visibility="invisible">
 
                         <ImageView
                             style="@style/fragment_home_list_item_icon"
@@ -584,7 +627,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
 
 
                     <LinearLayout
@@ -737,7 +781,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="@dimen/dp_6"
-                        android:text="乐民服务"
+                        android:text="文化服务"
                         android:textSize="@dimen/sp_12" />
                 </LinearLayout>
 
@@ -779,19 +823,6 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/lm2Item"
-                        style="@style/fragment_more_list_item_layout">
-
-                        <ImageView
-                            style="@style/fragment_home_list_item_icon"
-                            android:src="@drawable/lm_icon03" />
-
-                        <TextView
-                            style="@style/fragment_home_list_item_txt"
-                            android:text="全民阅读" />
-                    </LinearLayout>
-
-                    <LinearLayout
                         android:id="@+id/lm4Item"
                         style="@style/fragment_more_list_item_layout">
 
@@ -802,6 +833,20 @@
                         <TextView
                             style="@style/fragment_home_list_item_txt"
                             android:text="文化中心" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lm2Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/lm_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="全民阅读" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -897,7 +942,7 @@
                 android:background="@drawable/more_view_bg"
                 android:orientation="vertical"
                 android:padding="@dimen/dp_10"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -930,7 +975,7 @@
                     android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:id="@+id/km0Item"
+                        android:id="@+id/km0Item1"
                         style="@style/fragment_more_list_item_layout">
 
                         <ImageView
@@ -943,7 +988,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/km1Item"
+                        android:id="@+id/km1Item2"
                         style="@style/fragment_more_list_item_layout">
 
                         <ImageView
@@ -956,7 +1001,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/km2Item"
+                        android:id="@+id/km2Item3"
                         style="@style/fragment_more_list_item_layout">
 
                         <ImageView
@@ -1053,12 +1098,244 @@
                 android:background="@color/app_bg" />
 
             <LinearLayout
-                android:id="@+id/zmLayout"
+                android:id="@+id/pxLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/more_view_bg"
                 android:orientation="vertical"
                 android:padding="@dimen/dp_10">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="@dimen/sp_12"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:text="培训就业"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/px0Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/zm_icon01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="培训" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/px1Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/zm_icon02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="就业" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/px2Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/zm_icon0666" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="房屋租赁" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/px3Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb20" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="医疗救助" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm10Item1"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb33" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="青找" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/zm4Item1"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb211" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="互帮互助" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm5Item1"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb22" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="教育帮扶" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm6Item1"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb23" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="公租房管理" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm7Item1"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb24" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="公益活动" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/zm8Item1"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb25" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="养老机构" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm9Item1"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb26" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="遵品直供" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm10Item11111"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb33" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="青找" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm11Item1"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon04" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="医疗救助" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/zmLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_view_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="wrap_content"

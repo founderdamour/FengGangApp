@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dp_36">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_16"
+                android:background="@drawable/bm_order_result_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_50">
+
+                <ImageView
+                    android:id="@+id/resultIconIv"
+                    android:layout_width="@dimen/dp_150"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/cgbj" />
+
+
+                <TextView
+                    android:id="@+id/resultTxtTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="预约成功"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_25" />
+
+                <TextView
+                    android:id="@+id/bizNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="预约成功"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/orderDateTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="2018年12月9日8:30-12:00结婚登 记"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/orderNoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text="HYY11111111111111111"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_18" />
+
+                <TextView
+                    android:id="@+id/orderNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:gravity="center"
+                    android:text="8号"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_32" />
+
+                <RelativeLayout
+                    android:id="@+id/resultLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/registerBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_theme_btn_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="@dimen/dp_6"
+                        android:text="&#160;扫码签到&#160;"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/cancelBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/selector_theme_btn_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="@dimen/dp_6"
+                        android:text="&#160;取消预约&#160;"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".view.comm.RegisterActivity">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".view.comm.LoginActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
+            <LinearLayout
+                android:id="@+id/accountItem"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账号："
+                    android:textSize="@dimen/sp_16" />
+
+                <TextView
+                    android:id="@+id/accountId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="lyuanyuan1"
+                    android:textSize="@dimen/sp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/userOldPwdItem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:background="#fff4f6f8"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pwd1" />
+
+                <EditText
+                    android:id="@+id/userOldPwdEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:background="@color/transparent"
+                    android:hint="请输入原密码"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_15"
+                    tools:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="#fff4f6f8"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pwd1" />
+
+                <EditText
+                    android:id="@+id/userPwdEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:background="@color/transparent"
+                    android:hint="请输入用户名密码"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textSize="@dimen/sp_15"
+                    tools:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="#fff4f6f8"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_24"
+                    android:layout_height="@dimen/dp_24"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pwd2" />
+
+                <EditText
+                    android:id="@+id/userPwd2Et"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:background="@color/transparent"
+                    android:hint="请再次输入密码"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/sp_15"
+                    tools:text="" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nextBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:layout_margin="@dimen/dp_30"
+                android:background="@drawable/selector_theme_btn_bg"
+                android:clickable="true"
+                android:enabled="false"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="提&#160;&#160;&#160;交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+

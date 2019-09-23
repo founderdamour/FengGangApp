@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:text="请填写下面基本信息"
+                android:textColor="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_48"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/userNameFlagTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="申请人"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/userNameValueEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_36"
+                    android:layout_toEndOf="@+id/userNameFlagTv"
+                    android:background="@color/transparent"
+                    android:hint="请输入办理人姓名"
+                    tools:text="管理员"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_48"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/userIDFlagTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="身份证号"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/userIDValueEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_36"
+                    android:layout_toEndOf="@+id/userIDFlagTv"
+                    android:background="@color/transparent"
+                    android:hint="请填写18位身份证号码"
+                    tools:text="888888888888888888"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/tc_list_sub"
+
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_48"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/userPhoneFlagTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="联系电话"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/userPhoneValueEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_36"
+                    android:layout_toEndOf="@+id/userPhoneFlagTv"
+                    android:background="@color/transparent"
+                    android:hint="请输入联系电话"
+                    tools:text="18888888888"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/userAreaItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20">
+
+                <ImageView
+                    android:id="@+id/areaMoreIv"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/more" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/areaMoreIv"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/dp_33"
+                        android:text="所属街道及社区"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/areaValueTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:hint="请填写当事人地址"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_tip"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="@dimen/dp_48"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/userAddressFlagTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="当前住址"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14" />
+
+                <EditText
+                    android:id="@+id/userAddressValueEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_36"
+                    android:layout_toEndOf="@+id/userAddressFlagTv"
+                    android:background="@color/transparent"
+                    android:hint="请填写地址"
+                    tools:text="高新区塔山路"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/marryStatusItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:minHeight="@dimen/dp_48"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_10">
+
+                <TextView
+                    android:id="@+id/userMaritalFlagTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="婚姻状态"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/userMaritalMoreIv"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/userMaritalValueEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_36"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_toStartOf="@+id/userMaritalMoreIv"
+                    android:layout_toEndOf="@+id/userMaritalFlagTv"
+                    android:background="@color/transparent"
+                    android:text="初婚"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_6"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请上传办理资料"
+                    android:textColor="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:text="（必需上传）"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/fatherIdItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_white_square"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/fatherIdFlagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="男方身份证"
+                        android:textColor="@color/tc_list_title"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/fatherIdMoreIv"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/fatherIdValueEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toStartOf="@+id/fatherIdMoreIv"
+                        android:layout_toEndOf="@+id/fatherIdFlagTv"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:text="未上传"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/app_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/motherIdItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/motherIdFlagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="女方身份证"
+                        android:textColor="@color/tc_list_title"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/motherIdMoreIv"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/motherIdValueEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toStartOf="@+id/motherIdMoreIv"
+                        android:layout_toEndOf="@+id/motherIdFlagTv"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:text="未上传"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/app_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/certificateItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/certificateFlagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="子女签定情况"
+                        android:textColor="@color/tc_list_title"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/certificateMoreIv"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/certificateValueEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toStartOf="@+id/certificateMoreIv"
+                        android:layout_toEndOf="@+id/certificateFlagTv"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:text="请上传子女鉴定情况"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/app_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/fatherRegisterItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/fatherRegisterFlagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="男方户口簿"
+                        android:textColor="@color/tc_list_title"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/fatherRegisterMoreIv"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/fatherRegisterValueEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toStartOf="@+id/fatherRegisterMoreIv"
+                        android:layout_toEndOf="@+id/fatherRegisterFlagTv"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:text="未上传"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/app_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/motherRegisterItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:id="@+id/motherRegisterFlagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="女方户口簿"
+                        android:textColor="@color/tc_list_title"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/motherRegisterMoreIv"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/motherRegisterValueEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toStartOf="@+id/motherRegisterMoreIv"
+                        android:layout_toEndOf="@+id/motherRegisterFlagTv"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:text="未上传"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/app_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/marriageCertificateItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/marriageCertificateFlagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="结婚证"
+                        android:textColor="@color/tc_list_title"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/marriageCertificateMoreIv"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/marriageCertificateValueEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toStartOf="@+id/marriageCertificateMoreIv"
+                        android:layout_toEndOf="@+id/marriageCertificateFlagTv"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:text="未上传"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/app_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/divorceAgreementItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/divorceAgreementFlagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="离婚协议"
+                        android:textColor="@color/tc_list_title"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/divorceAgreementMoreIv"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/divorceAgreementValueEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toStartOf="@+id/divorceAgreementMoreIv"
+                        android:layout_toEndOf="@+id/divorceAgreementFlagTv"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:text="未上传"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/app_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/childrenProofItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/childrenProofFlagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="再婚前子女情况证明"
+                        android:textColor="@color/tc_list_title"
+                        android:textSize="@dimen/sp_14" />
+
+                    <ImageView
+                        android:id="@+id/childrenProofMoreIv"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/more" />
+
+                    <TextView
+                        android:id="@+id/childrenProofValueEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_36"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toStartOf="@+id/childrenProofMoreIv"
+                        android:layout_toEndOf="@+id/childrenProofFlagTv"
+                        android:background="@color/transparent"
+                        android:gravity="end"
+                        android:text="未上传"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_26"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/noticeDetailsItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_10"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/noticeFlagTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="已读并同意《办理须知》"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/noticeMoreIv"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="@dimen/dp_18"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/noticeValueEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_36"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_toStartOf="@+id/noticeMoreIv"
+                    android:layout_toEndOf="@+id/noticeFlagTv"
+                    android:background="@color/transparent"
+                    android:gravity="end"
+                    android:text="未上传"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:background="@color/app_bg"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_marginEnd="@dimen/dp_36"
+                android:background="@color/colorAccent"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="提 交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_26"
+                android:background="@color/app_bg" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

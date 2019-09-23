@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/titleBarLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/dp_48"-->
+    <!--tools:ignore="UselessParent">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/backBtn"-->
+    <!--android:layout_width="@dimen/dp_50"-->
+    <!--android:layout_height="@dimen/dp_48"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:background="@color/colorAccent"-->
+    <!--android:padding="@dimen/dp_14"-->
+    <!--android:src="@drawable/return_icon"-->
+    <!--android:visibility="visible" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/titleTv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:background="#00000000"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/titleBar_center"-->
+    <!--tools:text="个人信息" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/titleRightTv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:paddingLeft="@dimen/dp_16"-->
+    <!--android:paddingRight="@dimen/dp_16"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/sp_14"-->
+    <!--tools:text="编辑" />-->
+
+
+    <!--</RelativeLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <include layout="@layout/title_bar_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16">
+
+        <EditText
+            android:id="@+id/inputBoxEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_for_input_at_normal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="@dimen/dm020"
+            android:textColor="@color/tc_list_title"
+            android:textColorHint="@color/tc_list_tip"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/sp_16"
+            tools:text="你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！你好啊！" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dm015">
+
+            <TextView
+                android:id="@+id/inputMaxTipTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"
+                tools:text="23/25" />
+
+            <TextView
+                android:id="@+id/inputTipTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dm020"
+                android:layout_toStartOf="@+id/inputMaxTipTv"
+                android:textColor="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"
+                tools:text="好的名字，让别人更好记住你！" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

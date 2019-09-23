@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgItem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_180"
+                android:adjustViewBounds="true"
+                android:background="@color/app_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/dp_2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/take_photo_wish_add"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/userNameItem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_6">
+
+                <TextView
+                    android:id="@+id/userNameFlagIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="姓\u3000\u3000名"
+                    android:textColor="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/userNameMoreIv"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/userNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toStartOf="@+id/userNameMoreIv"
+                    android:layout_toEndOf="@+id/userNameFlagIv"
+                    android:gravity="right"
+                    tools:text="张佳佳"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/userPhoneItem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_46"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_6">
+
+                <TextView
+                    android:id="@+id/userPhoneFlagIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="电\u3000\u3000话"
+                    android:textColor="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/userPhoneMoreIv"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/userPhoneTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toStartOf="@+id/userPhoneMoreIv"
+                    android:layout_toEndOf="@+id/userPhoneFlagIv"
+                    android:gravity="right"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="15285536453" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/userAddressItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20">
+
+                <ImageView
+                    android:id="@+id/addressMoreIv"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/more" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/addressMoreIv"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/dp_33"
+                        android:text="所属街道及社区"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/userAddressValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:hint="请填写当事人地址"
+                        android:textColor="@color/tc_list_title"
+                        android:textColorHint="@color/tc_list_tip"
+                        android:textSize="@dimen/sp_14"
+                        tools:text="" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/contentItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20">
+
+                <ImageView
+                    android:id="@+id/contentMoreIv"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/more" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/contentMoreIv"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="@dimen/dp_33"
+                        android:text="心愿内容"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/contentValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:hint="请填写当事人心愿内容"
+                        android:textColor="@color/tc_list_title"
+                        android:textColorHint="@color/tc_list_tip"
+                        android:textSize="@dimen/sp_14"
+                        tools:text="我要想一个书包" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

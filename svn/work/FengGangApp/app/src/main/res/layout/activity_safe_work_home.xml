@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.sinothk.switchTabView.style1.ScrollTab
+            android:id="@+id/stab_tab00"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_36"
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:lib_ui_view_stab_avag="true"
+            app:lib_ui_view_stab_titles="已签到;请假"
+            app:lib_ui_view_stab_indicatorColor="@color/colorAccent"
+            app:lib_ui_view_stab_indicatorPadding="@dimen/dp_20"
+            app:lib_ui_view_stab_indicatorRadius="@dimen/dp_1"
+            app:lib_ui_view_stab_indicatorType="trend"
+            app:lib_ui_view_stab_indicatorWeight="@dimen/dp_2"
+            app:lib_ui_view_stab_indicatorWidth="@dimen/dp_40"
+            app:lib_ui_view_stab_text_color="@color/colorTabNormal"
+            app:lib_ui_view_stab_text_color_selected="@color/colorAccent"
+            app:lib_ui_view_stab_type="view_group" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_bg"
+            android:overScrollMode="never" />
+    </LinearLayout>
+</LinearLayout>

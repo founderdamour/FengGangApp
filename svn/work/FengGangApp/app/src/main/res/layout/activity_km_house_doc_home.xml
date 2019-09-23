@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/item0Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/wt01" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingStart="@dimen/dp_150"
+                    android:text="问题回答库"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_6"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/item1Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/wt02" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingEnd="@dimen/dp_150"
+                    android:text="我的咨询"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_18" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <LinearLayout
+                android:id="@+id/onlineTipView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_6">
+
+                <TextView
+                    android:layout_width="@dimen/dp_2"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:textSize="@dimen/sp_10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="在线医生"
+                    android:textColor="@color/tc"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <com.zkhy.community.widget.LawyerListItemView
+                android:id="@+id/lawyerListItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:padding="@dimen/dp_16">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="@dimen/dp_2"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/colorAccent"-->
+                    <!--android:textSize="@dimen/sp_10" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginStart="@dimen/dp_10"-->
+                    <!--android:text="在线医生"-->
+                    <!--android:textColor="@color/tc"-->
+                    <!--android:textSize="@dimen/sp_12" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingStart="@dimen/dp_16"-->
+                <!--android:paddingEnd="@dimen/dp_16">-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/doc0Item"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/selector_bg_white_square"-->
+                    <!--android:clickable="true"-->
+                    <!--android:focusable="true"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="right"-->
+                        <!--android:padding="@dimen/dp_10"-->
+                        <!--android:text="在线"-->
+                        <!--android:textColor="#66B966"-->
+                        <!--android:textSize="@dimen/sp_12" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp_42"-->
+                        <!--android:layout_height="@dimen/dp_42"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:src="@drawable/mr_tx" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:layout_marginTop="@dimen/dp_6"-->
+                        <!--android:text="张黎"-->
+                        <!--android:textColor="@color/tc"-->
+                        <!--android:textSize="@dimen/sp_14" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:paddingBottom="@dimen/dp_10"-->
+                        <!--android:text="执医15年"-->
+                        <!--android:textColor="@color/tc_list_sub"-->
+                        <!--android:textSize="@dimen/sp_12" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:padding="@dimen/dp_6"-->
+                            <!--android:text="儿科"-->
+                            <!--android:textColor="@color/colorAccent"-->
+                            <!--android:textSize="@dimen/sp_12"-->
+                            <!--android:visibility="gone" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:padding="@dimen/dp_6"-->
+                            <!--android:text="妇科"-->
+                            <!--android:textColor="@color/colorAccent"-->
+                            <!--android:textSize="@dimen/sp_12"-->
+                            <!--android:visibility="gone" />-->
+
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="@dimen/dp_10"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/app_bg" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/doc1Item"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/selector_bg_white_square"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:visibility="invisible">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="right"-->
+                        <!--android:padding="@dimen/dp_10"-->
+                        <!--android:text="在线"-->
+                        <!--android:textColor="#66B966"-->
+                        <!--android:textSize="@dimen/sp_12" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp_42"-->
+                        <!--android:layout_height="@dimen/dp_42"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:src="@drawable/tx" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:layout_marginTop="@dimen/dp_6"-->
+                        <!--android:text="赵晓莉"-->
+                        <!--android:textColor="@color/tc"-->
+                        <!--android:textSize="@dimen/sp_14" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:text="执业10年"-->
+                        <!--android:textColor="@color/tc_list_sub"-->
+                        <!--android:textSize="@dimen/sp_12" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:padding="@dimen/dp_6"-->
+                            <!--android:text="骨科"-->
+                            <!--android:textColor="@color/colorAccent"-->
+                            <!--android:textSize="@dimen/sp_12" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:padding="@dimen/dp_6"-->
+                            <!--android:text="皮肤科"-->
+                            <!--android:textColor="@color/colorAccent"-->
+                            <!--android:textSize="@dimen/sp_12" />-->
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="@dimen/dp_10"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:background="@color/app_bg" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/doc2Item"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@drawable/selector_bg_white_square"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:visibility="invisible">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="right"-->
+                        <!--android:padding="@dimen/dp_10"-->
+                        <!--android:text="在线"-->
+                        <!--android:textColor="#66B966"-->
+                        <!--android:textSize="@dimen/sp_12" />-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="@dimen/dp_42"-->
+                        <!--android:layout_height="@dimen/dp_42"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:src="@drawable/tx" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:layout_marginTop="@dimen/dp_6"-->
+                        <!--android:text="赵晓莉"-->
+                        <!--android:textColor="@color/tc"-->
+                        <!--android:textSize="@dimen/sp_14" />-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:text="执业10年"-->
+                        <!--android:textColor="@color/tc_list_sub"-->
+                        <!--android:textSize="@dimen/sp_12" />-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:padding="@dimen/dp_6"-->
+                            <!--android:text="妇科"-->
+                            <!--android:textColor="@color/colorAccent"-->
+                            <!--android:textSize="@dimen/sp_12" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:padding="@dimen/dp_6"-->
+                            <!--android:text="产科"-->
+                            <!--android:textColor="@color/colorAccent"-->
+                            <!--android:textSize="@dimen/sp_12" />-->
+
+                    <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

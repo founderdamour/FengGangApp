@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--轮播-->
+            <com.sinothk.widget.bannerView.style1.BannerView
+                android:id="@+id/bannerView"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:background="@color/white"
+                android:visibility="visible"
+                app:image_scale_type="center_crop"
+                app:indicator_drawable_selected="@drawable/banner_white_radius"
+                app:indicator_drawable_unselected="@drawable/banner_gray_radius"
+                app:indicator_height="10dp"
+                app:indicator_width="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/item0Layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_10">
+
+                <ImageView
+                    android:id="@+id/item0IconIv"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_2"
+                    app:srcCompat="@drawable/ftjd" />
+
+                <ImageView
+                    android:id="@+id/moreIcon"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_8"
+                    app:srcCompat="@drawable/more" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toStartOf="@+id/moreIcon"
+                    android:layout_toEndOf="@+id/item0IconIv"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="问题解答库"
+                        android:textColor="@color/tc"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/QATipTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_13"
+                        tools:text="每天有100+个咨询问题被解决" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/item1Layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_10">
+
+                <ImageView
+                    android:id="@+id/item1IconIv"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_2"
+                    app:srcCompat="@drawable/wyzx" />
+
+                <ImageView
+                    android:id="@+id/more1Icon"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_8"
+                    app:srcCompat="@drawable/more" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toStartOf="@+id/more1Icon"
+                    android:layout_toEndOf="@+id/item1IconIv"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="我的咨询"
+                        android:textColor="@color/tc"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/myQATipTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_13"
+                        tools:text="您咨询了3个问题" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/app_bg" />
+
+            <RelativeLayout
+                android:id="@+id/item2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_70"
+                android:background="@drawable/selector_bg_white_square"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_10">
+
+                <ImageView
+                    android:id="@+id/item2IconIv"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_2"
+                    app:srcCompat="@drawable/flfwjg" />
+
+                <ImageView
+                    android:id="@+id/more2Icon"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_8"
+                    app:srcCompat="@drawable/more" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_toStartOf="@+id/more2Icon"
+                    android:layout_toEndOf="@+id/item2IconIv"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="法律服务机构"
+                        android:textColor="@color/tc"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/lawFirmTipTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_13"
+                        tools:text="周边有12个法律服务机构" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lawyerOnlineTipView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_6"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="@dimen/dp_2"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:textSize="@dimen/sp_10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:text="在线律师"
+                    android:textColor="@color/tc"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <com.zkhy.community.widget.LawyerListItemView
+                android:id="@+id/lawyerListItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

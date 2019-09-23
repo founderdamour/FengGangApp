@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path
+        name="images"
+        path="Android/data/com.example.package.name/files/Pictures/OriPicture/" />
+    <external-path
+        name="images"
+        path="Android/data/com.example.package.name/files/Pictures/OriPicture/" />
+    <external-files-path
+        name="images"
+        path="files/Pictures/OriPicture" />
+    <root-path
+        name="images"
+        path="" />
+    <root-path
+        name="images"
+        path="" />
+
+    <files-path name="file" path="download/" />
+    <external-path name="file" path="download/" />
+</paths>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<paths>-->
+<!--<external-path-->
+    <!--name="external_files"-->
+    <!--path="." />-->
+<!--<files-path-->
+    <!--name="tangdada"-->
+    <!--path="download/" />-->
+<!--<external-path-->
+    <!--name="tangdada"-->
+    <!--path="download/" />-->
+<!--</paths>-->

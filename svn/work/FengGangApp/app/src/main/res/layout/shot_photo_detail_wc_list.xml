@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_bg_white_square"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/doneItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/donePoint"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:background="@drawable/shape_point_flow_doing" />
+
+            <TextView
+                android:id="@+id/doneTimeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@+id/donePoint"
+                android:textColor="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"
+                tools:text="2019-03-25 19:22" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/doneLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_8"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/dp_3"
+            android:paddingEnd="@dimen/dp_0">
+
+            <TextView
+                android:id="@+id/doneContentTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingStart="@dimen/dp_18"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14"
+                tools:text="您的问题反馈单编号XXXXX,已反馈到相关部门，请耐心等待 ..." />
+
+            <LinearLayout
+                android:id="@+id/doneImgItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <com.sinothk.image.show.NineGridView
+                    android:id="@+id/done9GridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/checkView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/checkPoint"
+                    android:layout_width="@dimen/dp_18"
+                    android:layout_height="@dimen/dp_18"
+                    android:background="@drawable/shape_point_flow_doing" />
+
+                <TextView
+                    android:id="@+id/checkTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_toEndOf="@+id/checkPoint"
+                    android:textColor="@color/tc_list_sub"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="visible"
+                    tools:text="2019-03-25 19:22" />
+
+                <TextView
+                    android:id="@+id/checkResultTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/level_1"
+                    android:paddingStart="@dimen/dp_6"
+                    android:paddingTop="@dimen/dp_1"
+                    android:paddingEnd="@dimen/dp_6"
+                    android:paddingBottom="@dimen/dp_1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_13"
+                    tools:text="未通过" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/checkLine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_3"
+                android:paddingEnd="@dimen/dp_0">
+
+                <TextView
+                    android:id="@+id/checkContentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/dp_18"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="您的问题反馈单编号XXXXX,已反馈到相关部门，请耐心等待 ..." />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/doingItem"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="visible"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center_vertical">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="@dimen/dp_18"-->
+    <!--android:layout_height="@dimen/dp_18"-->
+    <!--android:background="@drawable/shape_point_flow_doing" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/doingTimeTv"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="@dimen/dp_10"-->
+    <!--android:text="2019-03-25 19:22"-->
+    <!--android:textColor="@color/tc_list_sub"-->
+    <!--android:textSize="@dimen/sp_14"-->
+    <!--android:visibility="visible" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="@dimen/dp_8"-->
+    <!--android:background="@color/white"-->
+    <!--android:orientation="vertical"-->
+    <!--android:paddingStart="@dimen/dp_3"-->
+    <!--android:paddingEnd="@dimen/dp_0">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/doingContentTv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/white"-->
+    <!--android:paddingStart="@dimen/dp_18"-->
+    <!--android:paddingTop="@dimen/dp_8"-->
+    <!--android:paddingBottom="@dimen/dp_8"-->
+    <!--android:textColor="@color/tc_list_title"-->
+    <!--android:textSize="@dimen/sp_14"-->
+    <!--tools:text="您的问题反馈单编号XXXXX,已反馈到相关部门，请耐心等待 ..." />-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/doingImgItem"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#F4F6F8"-->
+    <!--android:paddingStart="@dimen/dp_16"-->
+    <!--android:paddingTop="@dimen/dp_8"-->
+    <!--android:paddingEnd="@dimen/dp_16"-->
+    <!--android:visibility="gone">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/doingIv"-->
+    <!--android:layout_width="@dimen/dp_80"-->
+    <!--android:layout_height="@dimen/dp_80"-->
+    <!--android:adjustViewBounds="true"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@drawable/img_loading_default"-->
+    <!--android:visibility="visible" />-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/zpItem"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/dp_1"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:layout_marginBottom="@dimen/dp_3"-->
+    <!--android:background="@color/app_bg" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/zpContentTv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:textColor="@color/tc_list_title"-->
+    <!--android:textSize="@dimen/sp_14"-->
+    <!--tools:text="您的问题反馈单编号XXXXX,已反馈到相关部门，请耐心等待 ..." />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/zpTimeTv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:text="2019-03-25 19:22:34"-->
+    <!--android:textColor="@color/tc_list_title"-->
+    <!--android:textSize="@dimen/sp_14"-->
+    <!--android:visibility="visible" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/wcItem"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/dp_1"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:layout_marginBottom="@dimen/dp_3"-->
+    <!--android:background="@color/app_bg" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/wcContentTv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:textColor="@color/tc_list_title"-->
+    <!--android:textSize="@dimen/sp_14"-->
+    <!--tools:text="你提交的问题已经处理完成，感谢你对我们的反馈" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/wcImgIv"-->
+    <!--android:layout_width="@dimen/dp_100"-->
+    <!--android:layout_height="@dimen/dp_100"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:adjustViewBounds="true"-->
+    <!--android:scaleType="centerInside"-->
+    <!--android:src="@drawable/img_loading_default"-->
+    <!--android:visibility="visible" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/wcTimeTv"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="@dimen/dp_3"-->
+    <!--android:text="2019-03-25 19:22:34"-->
+    <!--android:textColor="@color/tc_list_title"-->
+    <!--android:textSize="@dimen/sp_14"-->
+    <!--android:visibility="visible" />-->
+    <!--</LinearLayout>-->
+</LinearLayout>

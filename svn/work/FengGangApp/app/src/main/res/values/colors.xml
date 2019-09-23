@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3e7adc</color>
+    <color name="colorPrimaryDark">#3e7adc</color>
+    <color name="colorAccent">#3e7adc</color>
+
+    <color name="colorTabNormal">#959a9e</color>
+    <color name="colorTabChecked">#3398e9</color>
+
+    <color name="app_bg">#F6F6F6</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="txt_color">#333333</color>
+
+    <color name="tc">#333333</color>
+    <color name="tc_list_title">#666666</color>
+    <color name="tc_list_sub">#999999</color>
+    <color name="tc_list_tip">#B0B0B0</color>
+
+    <color name="dj_theme_color">#E7431D</color>
+    <color name="dj_theme_color_selected">#de350e</color>
+
+    <color name="status_doing">@color/colorAccent</color>
+    <color name="status_success">#3be71d</color>
+    <color name="status_error">#E7431D</color>
+
+    <color name="bg_tra">#55000000</color>
+
+    <color name="level_1">#FF0600</color>
+    <color name="level_2">#FFC000</color>
+    <color name="level_3">#00B4FF</color>
+</resources>

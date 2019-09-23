@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemRootView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_56"
+    android:layout_margin="@dimen/dp_10"
+    android:background="@drawable/selector_bg_white_square_round"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_6"
+    tools:context=".view.main.bm.BmIndexOrgListActivity">
+
+    <ImageView
+        android:id="@+id/itemIconIv"
+        android:layout_width="@dimen/dp_46"
+        android:layout_height="@dimen/dp_46"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/mr_tx" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_toEndOf="@+id/itemIconIv">
+
+        <TextView
+            android:id="@+id/itemTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:singleLine="true"
+            android:text="2018-12-24"
+            android:textColor="@color/tc_list_sub"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/itemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_toStartOf="@+id/itemTimeTv"
+            android:singleLine="true"
+            android:text="张佳佳张佳佳张佳佳张佳佳张佳佳张佳佳"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/itemStatusTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:singleLine="true"
+            android:text="待认领"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/itemContentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_toStartOf="@+id/itemStatusTv"
+            android:singleLine="true"
+            android:text="我想要一个书包"
+            android:textColor="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

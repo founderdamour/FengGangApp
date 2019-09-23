@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical"
+    tools:context=".view.comm.RegisterActivity">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="短信验证码将发送到账号绑定的手机上"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/userPhoneNumTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:textColor="@color/tc"
+                        android:textSize="@dimen/sp_25"
+                        tools:text="15288898654" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:background="#fff4f6f8"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/verificationCodeIcon"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/verification_code" />
+
+                    <TextView
+                        android:id="@+id/verificationCodeBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_6"
+                        android:background="@color/colorAccent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="@dimen/dp_6"
+                        android:text="获取验证码"
+                        android:textColor="@color/white" />
+
+                    <EditText
+                        android:id="@+id/verificationCodeEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:layout_toStartOf="@+id/verificationCodeBtn"
+                        android:layout_toEndOf="@+id/verificationCodeIcon"
+                        android:background="@color/transparent"
+                        android:hint="请输入验证码"
+                        android:inputType="number"
+                        android:maxLength="8"
+                        android:singleLine="true"
+                        android:textSize="@dimen/sp_15"
+                        tools:text="123456789999912345678999991234567899999" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nextBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:layout_margin="@dimen/dp_30"
+                android:background="@drawable/selector_theme_btn_bg"
+                android:clickable="true"
+                android:enabled="false"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+

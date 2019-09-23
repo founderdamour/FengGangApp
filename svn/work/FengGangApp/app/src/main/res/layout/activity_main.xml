@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical">
+
+        <com.zkhy.library.widget.NoScrollViewPage
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/app_bg"
+            android:overScrollMode="never" />
+        <!--com.hy.integration.widget.NoScrollViewPage-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_54"
+            android:background="@color/transparent">
+
+            <com.sinothk.tab.weiXin.AlphaTabsIndicator
+                android:id="@+id/alphaIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_54"
+                android:layout_alignParentBottom="true"
+                android:background="#ffffff"
+                android:orientation="horizontal">
+
+                <com.sinothk.tab.weiXin.AlphaTabView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_8"
+                    app:tabIconNormal="@mipmap/tab_0_unselected"
+                    app:tabIconSelected="@mipmap/tab_0_selected"
+                    app:tabText="首页"
+                    app:tabTextSize="@dimen/sp_13"
+                    app:textColorNormal="@color/colorTabNormal"
+                    app:textColorSelected="@color/colorTabChecked" />
+
+                <com.sinothk.tab.weiXin.AlphaTabView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dp_36"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_8"
+                    android:visibility="gone"
+                    app:tabIconNormal="@mipmap/tab_1_unselected"
+                    app:tabIconSelected="@mipmap/tab_1_selected"
+                    app:tabText="社区"
+                    app:tabTextSize="@dimen/sp_13"
+                    app:textColorNormal="@color/colorTabNormal"
+                    app:textColorSelected="@color/colorTabChecked" />
+
+
+                <com.sinothk.tab.weiXin.AlphaTabView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_36"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_8"
+                    android:visibility="gone"
+                    app:tabIconNormal="@mipmap/tab_3_unselected"
+                    app:tabIconSelected="@mipmap/tab_3_selected"
+                    app:tabText="周边"
+                    app:tabTextSize="@dimen/sp_13"
+                    app:textColorNormal="@color/colorTabNormal"
+                    app:textColorSelected="@color/colorTabChecked" />
+
+                <com.sinothk.tab.weiXin.AlphaTabView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_8"
+                    app:tabIconNormal="@mipmap/tab_4_unselected"
+                    app:tabIconSelected="@mipmap/tab_4_selected"
+                    app:tabText="我的"
+                    app:tabTextSize="@dimen/sp_13"
+                    app:textColorNormal="@color/colorTabNormal"
+                    app:textColorSelected="@color/colorTabChecked" />
+
+            </com.sinothk.tab.weiXin.AlphaTabsIndicator>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignTop="@id/alphaIndicator"
+                android:background="#D2D2D2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabView2"
+        android:layout_width="@dimen/dp_72"
+        android:layout_height="@dimen/dp_72"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/tab_2_selected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/dp_6"
+            android:text="随手拍"
+            android:textColor="@color/colorTabNormal"
+            android:textSize="@dimen/sp_13"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>
+

@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:layout_margin="@dimen/dp_20"
+            android:background="@drawable/selector_theme_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="提交完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomView"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10">
+
+                <com.sinothk.view.image.rounded.RoundedImageView
+                    android:id="@+id/userAvatarIv"
+                    android:layout_width="@dimen/dp_48"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_marginTop="@dimen/dp_6"
+                    android:layout_marginBottom="@dimen/dp_6"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mr_tx"
+                    app:riv_border_color="#FFF"
+                    app:riv_border_width="2dp"
+                    app:riv_corner_radius="10dp"
+                    app:riv_mutate_background="false"
+                    app:riv_oval="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_12"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="赵伟律师"
+                        android:textColor="@color/tc"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/timeTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="152855364533"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:gravity="center_vertical"
+                        android:text="反馈内容"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/submitTimeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:gravity="center_vertical"
+                        android:text="2019-03-27"
+                        android:textColor="@color/tc_list_sub"
+                        android:textSize="@dimen/sp_14" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/contentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="反馈时间反馈时间反馈时间反馈时间反馈时间反馈时间反馈时间反馈时间反馈时间反馈时间反馈时间反馈时间反馈时间" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10">
+
+                <ImageView
+                    android:layout_width="@dimen/sp_14"
+                    android:layout_height="@dimen/sp_14"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:src="@drawable/loc_blue" />
+
+                <TextView
+                    android:id="@+id/submitLocTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_14"
+                    tools:text="贵州省遵义市汇川区厦门路12号靠近中国光大银行" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentImgItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F4F6F8"
+                android:visibility="gone">
+
+                <com.sinothk.image.show.NineGridView
+                    android:id="@+id/nineGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="处理记录"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_16" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/zpPoint"
+                            android:layout_width="@dimen/dp_18"
+                            android:layout_height="@dimen/dp_18"
+                            android:background="@drawable/shape_point_flow_doing" />
+
+                        <TextView
+                            android:id="@+id/zpTimeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:text="2019-03-25 19:22"
+                            android:textColor="@color/tc_list_sub"
+                            android:textSize="@dimen/sp_14"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zpItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_7"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/dp_3"
+                        android:paddingEnd="@dimen/dp_0">
+
+                        <TextView
+                            android:id="@+id/zpContentTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:paddingStart="@dimen/dp_18"
+                            android:paddingTop="@dimen/dp_8"
+                            android:paddingBottom="@dimen/dp_8"
+                            android:textColor="@color/tc_list_title"
+                            android:textSize="@dimen/sp_14"
+                            tools:text="您的问题反馈单编号XXXXX,已反馈到相关部门，请耐心等待 ..." />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/taskView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/doingItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:id="@+id/doingPoint"
+                                android:layout_width="@dimen/dp_18"
+                                android:layout_height="@dimen/dp_18"
+                                android:background="@drawable/shape_point_flow_doing" />
+
+                            <TextView
+                                android:id="@+id/doingTimeTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_toEndOf="@+id/doingPoint"
+                                android:textColor="@color/tc_list_sub"
+                                android:textSize="@dimen/sp_14"
+                                android:visibility="visible"
+                                tools:text="2019-03-25 19:22" />
+
+                            <TextView
+                                android:id="@+id/taskLevelTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@color/level_1"
+                                android:paddingStart="@dimen/dp_6"
+                                android:paddingTop="@dimen/dp_1"
+                                android:paddingEnd="@dimen/dp_6"
+                                android:paddingBottom="@dimen/dp_1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_13"
+                                tools:text="紧急" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/doingLine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/dp_3"
+                            android:paddingEnd="@dimen/dp_0">
+
+                            <TextView
+                                android:id="@+id/doingContentTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/dp_18"
+                                android:paddingTop="@dimen/dp_8"
+                                android:paddingBottom="@dimen/dp_8"
+                                android:textColor="@color/tc_list_title"
+                                android:textSize="@dimen/sp_14"
+                                tools:text="您的问题反馈单编号XXXXX,已反馈到相关部门，请耐心等待 ..." />
+
+                            <TextView
+                                android:id="@+id/requireDoneTimeTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/dp_18"
+                                android:paddingBottom="@dimen/dp_8"
+                                android:textColor="@color/level_1"
+                                android:textSize="@dimen/sp_14"
+                                tools:text="完成期限：2019-04-02 08:00:00" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.zkhy.community.widget.ShotPhotoHandleDetailListView
+                        android:id="@+id/doneResultView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/dp_36"
+                        android:visibility="gone"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/doneItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="@dimen/dp_18"
+                                android:layout_height="@dimen/dp_18"
+                                android:background="@drawable/shape_point_flow_doing" />
+
+                            <TextView
+                                android:id="@+id/doneTimeTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:text="2019-03-25 19:22"
+                                android:textColor="@color/tc_list_sub"
+                                android:textSize="@dimen/sp_14"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/dp_3"
+                            android:paddingEnd="@dimen/dp_0">
+
+                            <TextView
+                                android:id="@+id/doneContentTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:paddingStart="@dimen/dp_18"
+                                android:paddingTop="@dimen/dp_8"
+                                android:paddingBottom="@dimen/dp_8"
+                                android:textColor="@color/tc_list_title"
+                                android:textSize="@dimen/sp_14"
+                                tools:text="您的问题反馈单编号XXXXX,已反馈到相关部门，请耐心等待 ..." />
+
+                            <LinearLayout
+                                android:id="@+id/doneImgItem"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#F4F6F8"
+                                android:visibility="visible">
+
+                                <ImageView
+                                    android:id="@+id/doneIv"
+                                    android:layout_width="@dimen/dp_80"
+                                    android:layout_height="@dimen/dp_80"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/img_loading_default"
+                                    android:visibility="gone" />
+
+                                <com.sinothk.image.show.NineGridView
+                                    android:id="@+id/done9GridView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dp_16" />
+
+                            </LinearLayout>
+
+                            <!--<LinearLayout-->
+                            <!--android:id="@+id/doneImgItem"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:background="#F4F6F8"-->
+                            <!--android:paddingStart="@dimen/dp_16"-->
+                            <!--android:paddingTop="@dimen/dp_8"-->
+                            <!--android:paddingBottom="@dimen/dp_8"-->
+                            <!--android:paddingEnd="@dimen/dp_16"-->
+                            <!--android:visibility="visible">-->
+
+                            <!--<ImageView-->
+                            <!--android:id="@+id/doneImgIv"-->
+                            <!--android:layout_width="@dimen/dp_80"-->
+                            <!--android:layout_height="@dimen/dp_80"-->
+                            <!--android:adjustViewBounds="true"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--android:src="@drawable/img_loading_default"-->
+                            <!--android:visibility="visible" />-->
+                            <!--</LinearLayout>-->
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,1597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+    <!---->
+    <RelativeLayout
+        android:id="@+id/userIDItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/userIDFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="身份证"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/userIDMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/userIDValueEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/userIDMoreIv"
+            android:layout_toEndOf="@+id/userIDFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查 看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+    <!---->
+    <!--政审资料-->
+    <RelativeLayout
+        android:id="@+id/userIDOrRegisterItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/userIDOrRegisterFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="身份证/户口本"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/userIDOrRegisterMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/userIDOrRegisterValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/userIDOrRegisterMoreIv"
+            android:layout_toEndOf="@+id/userIDOrRegisterFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <!---->
+    <RelativeLayout
+        android:id="@+id/singleRegisterItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/singleRegisterFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="户口本"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/singleRegisterMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/singleRegisterValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/singleRegisterMoreIv"
+            android:layout_toEndOf="@+id/singleRegisterFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/birthdayCardItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/birthdayFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="生育证"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/birthdayMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/birthdayValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/birthdayMoreIv"
+            android:layout_toEndOf="@+id/birthdayFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vaccinationItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/vaccinationFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="疫苗接种证"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/vaccinationMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/vaccinationValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/vaccinationMoreIv"
+            android:layout_toEndOf="@+id/vaccinationFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userPhotoItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/userPhotoFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="本人照片"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/userPhotoMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/userPhotoValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/userPhotoMoreIv"
+            android:layout_toEndOf="@+id/userPhotoFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/materialItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/materialFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="申请表和评定表"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/materialMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/materialValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/materialMoreIv"
+            android:layout_toEndOf="@+id/materialFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/propertyCertificateItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/propertyCertificateImgFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="房产证或购房合同"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/propertyCertificateImgMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/propertyCertificateTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/propertyCertificateImgMoreIv"
+            android:layout_toEndOf="@+id/propertyCertificateImgFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查 看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/userBCImgItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/selector_bg_white_square"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/userBCImgFlagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="贵州银行的银行卡"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/userBCImgMoreIv"
+            android:layout_width="@dimen/dp_18"
+            android:layout_height="@dimen/dp_18"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more" />
+
+        <TextView
+            android:id="@+id/userBCValueTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_toStartOf="@+id/userBCImgMoreIv"
+            android:layout_toEndOf="@+id/userBCImgFlagTv"
+            android:background="@color/transparent"
+            android:gravity="end"
+            android:text="查看"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/tc_list_sub"
+            android:textSize="@dimen/sp_14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/flow02View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/flow02File01Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow02File01FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="男方身份证"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow02File01MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow02File01ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow02File01MoreIv"
+                android:layout_toEndOf="@+id/flow02File01FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow02File02Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow02File02FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="女方身份证"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow02File02MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow02File02ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow02File02MoreIv"
+                android:layout_toEndOf="@+id/flow02File02FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow02File03Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow02File03FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="子女签定情况"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow02File03MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow02File03ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow02File03MoreIv"
+                android:layout_toEndOf="@+id/flow02File03FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow02File04Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow02File04FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="男方户口簿"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow02File04MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow02File04ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow02File04MoreIv"
+                android:layout_toEndOf="@+id/flow02File04FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow02File05Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow02File05FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="女方户口簿"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow02File05MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow02File05ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow02File05MoreIv"
+                android:layout_toEndOf="@+id/flow02File05FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow02File06Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow02File06FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="结婚证"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow02File06MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow02File06ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow02File06MoreIv"
+                android:layout_toEndOf="@+id/flow02File06FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow02File07Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow02File07FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="离婚协议"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow02File07MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow02File07ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow02File07MoreIv"
+                android:layout_toEndOf="@+id/flow02File07FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow02File08Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow02File08FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="再婚前子女情况证明"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow02File08MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow02File08ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow02File08MoreIv"
+                android:layout_toEndOf="@+id/flow02File08FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flow19View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/flow19File01Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow19File01FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="身份证"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow19File01MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow19File01ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow19File01MoreIv"
+                android:layout_toEndOf="@+id/flow19File01FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow19File02Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow19File02FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="户口簿"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow19File02MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow19File02ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow19File02MoreIv"
+                android:layout_toEndOf="@+id/flow19File02FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow19File03Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow19File03FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="本人近期照片"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow19File03MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow19File03ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow19File03MoreIv"
+                android:layout_toEndOf="@+id/flow19File03FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow19File04Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow19File04FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="结婚证/生育服务证/其他生育材料"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow19File04MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow19File04ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow19File04MoreIv"
+                android:layout_toEndOf="@+id/flow19File04FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow19File05Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow19File05FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="政策外生育材料"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow19File05MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow19File05ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow19File05MoreIv"
+                android:layout_toEndOf="@+id/flow19File05FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow19File06Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow19File06FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="申请表"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow19File06MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow19File06ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow19File06MoreIv"
+                android:layout_toEndOf="@+id/flow19File06FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flow20View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/flow20File01Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow20File01FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="身份证或户口簿"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow20File01MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow20File01ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow20File01MoreIv"
+                android:layout_toEndOf="@+id/flow20File01FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow20File02Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow20File02FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="计划生育情况证明"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow20File02MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow20File02ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow20File02MoreIv"
+                android:layout_toEndOf="@+id/flow20File02FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow20File03Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow20File03FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="结婚证"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow20File03MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow20File03ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow20File03MoreIv"
+                android:layout_toEndOf="@+id/flow20File03FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flow21View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/flow21File01Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow21File01FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="身份证"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow21File01MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow21File01ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow21File01MoreIv"
+                android:layout_toEndOf="@+id/flow21File01FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow21File02Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow21File02FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="户口簿"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow21File02MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow21File02ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow21File02MoreIv"
+                android:layout_toEndOf="@+id/flow21File02FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow21File03Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow21File03FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="房产证或购房合同"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow21File03MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow21File03ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow21File03MoreIv"
+                android:layout_toEndOf="@+id/flow21File03FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow21File04Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow21File04FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="结婚证"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow21File04MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow21File04ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow21File04MoreIv"
+                android:layout_toEndOf="@+id/flow21File04FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flow22View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/flow22File01Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow22File01FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="申报义务人身份证或户口薄"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow22File01MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow22File01ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow22File01MoreIv"
+                android:layout_toEndOf="@+id/flow22File01FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow22File02Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow22File02FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="死者身份证或户口薄"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow22File02MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow22File02ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow22File02MoreIv"
+                android:layout_toEndOf="@+id/flow22File02FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flow23View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/flow23File01Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow23File01FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="身份证"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow23File01MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow23File01ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow23File01MoreIv"
+                android:layout_toEndOf="@+id/flow23File01FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow23File02Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow23File02FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="户口簿"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow23File02MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow23File02ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow23File02MoreIv"
+                android:layout_toEndOf="@+id/flow23File02FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/flow23File03Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_1"
+            android:background="@drawable/selector_bg_white_square"
+            android:paddingStart="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/flow23File03FlagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="有关单位出具的困难证明"
+                android:textColor="@color/tc_list_title"
+                android:textSize="@dimen/sp_14" />
+
+            <ImageView
+                android:id="@+id/flow23File03MoreIv"
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/more" />
+
+            <TextView
+                android:id="@+id/flow23File03ValueTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_toStartOf="@+id/flow23File03MoreIv"
+                android:layout_toEndOf="@+id/flow23File03FlagTv"
+                android:background="@color/transparent"
+                android:gravity="end"
+                android:text="查看"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/tc_list_sub"
+                android:textSize="@dimen/sp_14" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

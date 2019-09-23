@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16">
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|end"
+            android:textColor="#ff999999"
+            android:textSize="@dimen/sp_14"
+            tools:ignore="RtlHardcoded"
+            tools:text="2018-12-11" />
+
+        <TextView
+            android:id="@+id/contentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="#ff666666"
+            android:textSize="@dimen/sp_16"
+            tools:text="2018年11月23日我因喝点酒骑摩托车和小车相
+撞，事因对方掉头没大转弯灯我在10米以前按
+喇叭2声驾驶员还掉头导致我的车和他相撞，当
+时驾驶员也喝了酒导致我现在受伤住院时驾驶员也喝了酒导致我现在受伤住院，请问责
+任在那方？" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/statusTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_14"
+                tools:ignore="RtlHardcoded"
+                tools:text="1人回答" />
+
+            <TextView
+                android:id="@+id/totalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_14"
+                tools:ignore="RtlHardcoded"
+                tools:text="1人回答" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@color/app_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_12"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorAccent"
+            android:text="回答内容" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:text="回答内容"
+            android:textColor="@color/tc_list_title"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

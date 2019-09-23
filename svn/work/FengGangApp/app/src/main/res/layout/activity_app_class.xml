@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_bg"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
+            <LinearLayout
+                android:id="@+id/djLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_view_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="@dimen/sp_12"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:text="智慧党建"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/dj0Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="党费缴纳" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dj1Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="三会一课" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dj2Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="党员论坛" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dj5Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="宣传平台" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dj3Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="群众反馈" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/dj4Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="党员书包" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dj6Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@mipmap/dw_open_icon" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="党务公开" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dj5Item1"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="宣传平台" />
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:id="@+id/dj6Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="党员论坛" />
+                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/dj7Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon04" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="群众反馈" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/djLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/app_bg" />
+
+            <LinearLayout
+                android:id="@+id/amLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_view_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="@dimen/sp_12"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:text="安民服务"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/am0Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/am_icon01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="法律服务" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am1Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/am_icon02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="警务管理" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am7Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb0121" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="安全生产" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am2Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/am_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="应急演练" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am3Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb04" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="智慧门禁" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/am6Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/am_xf07" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="网上信访" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am8Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/mk_icon" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="煤矿监控" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am7Item11"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb0121" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="安全生产" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am5Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb06" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="宠物管理" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/am4Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb05" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="网格调度" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/app_bg" />
+
+            <LinearLayout
+                android:id="@+id/bmLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_view_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="@dimen/sp_12"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:text="便民服务"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/bm0Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/bm_icon01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="办事指南" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm1Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/bm_icon02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="我要办事" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm2Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/bm_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="预约排号" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm12Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/qmpp_303" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="全民跑跑" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm3Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/zm_icon066" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="生活缴费" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm11Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb13" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="智慧停车" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/bm4Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb07" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="便民查询" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm5Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb08" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="社保查询" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm6Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb09" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="公积金服务" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm7Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb010" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="物业管理" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/bm9Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb122" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="家政服务" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm10Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb12" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="房屋中介" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/bm8Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb11" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="社区志愿者" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm8Item11"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb11" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="社区志愿者" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/bm12Item22"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/qmpp_303" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="全民跑跑" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm13Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb122" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="家政服务" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm14Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb12" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="房屋中介" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bm15Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb13" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="智慧停车" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/app_bg" />
+
+            <LinearLayout
+                android:id="@+id/lmLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_view_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="@dimen/sp_12"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:text="乐民服务"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/lm0Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/lm_icon01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="周边活动" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lm1Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/lm_icon02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="文体场所" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lm2Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/lm_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="全民阅读" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lm4Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb15" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="文化中心" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lm3Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb14" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="文化组织" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/lm4Item111"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb15" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="文化中心" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lm5Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb16" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="乐民体系" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lm6Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lm7Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon04" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/app_bg" />
+
+            <LinearLayout
+                android:id="@+id/kmLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_view_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="@dimen/sp_12"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:text="康民服务"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/km0Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/km_icon01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="预约挂号" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/km1Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/km_icon02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="家庭医生" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/km2Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/km_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="心理咨询" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/km3Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb17" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="远程医疗" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/km5Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb19" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="医疗保险" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/km4Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb18" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="体育赛事" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/km6Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon03" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="党员论坛" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/km7Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon04" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="群众反馈" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10"
+                android:background="@color/app_bg" />
+
+            <LinearLayout
+                android:id="@+id/zmLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/more_view_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_10">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="@dimen/dp_3"
+                        android:layout_height="@dimen/sp_12"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:text="助民服务"
+                        android:textSize="@dimen/sp_12" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:background="@color/app_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/zm0Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/zm_icon01" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="微心愿" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm1Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/zm_icon02" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="爱心筹集" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm2Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/zm_icon0666" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="创业就业" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm3Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb20" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="医疗救助" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm10Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb33" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="青找" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/zm4Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb211" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="互帮互助" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm5Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb22" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="教育帮扶" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm6Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb23" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="公租房管理" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm7Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb24" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="公益活动" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/zm8Item"
+                        style="@style/fragment_more_list_item_layout">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb25" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="养老机构" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm9Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="visible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb26" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="遵品直供" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm10Item111"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/xtb33" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="青找" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zm11Item"
+                        style="@style/fragment_more_list_item_layout"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            style="@style/fragment_home_list_item_icon"
+                            android:src="@drawable/dj_icon04" />
+
+                        <TextView
+                            style="@style/fragment_home_list_item_txt"
+                            android:text="医疗救助" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

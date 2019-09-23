@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent" android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_bg">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                    android:id="@+id/item0Layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/wish_00"/>
+
+                <TextView
+                        android:id="@+id/item0TxtTv"
+                        android:layout_width="wrap_content"
+                        android:text="心愿清单"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_20"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/item0NumTv"
+                        android:layout_width="wrap_content"
+                        tools:text="123454555123454555123454555"
+                        android:text="0"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@+id/item0TxtTv"
+                        android:layout_below="@+id/item0TxtTv"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:layout_marginStart="-62dp"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:textSize="@dimen/sp_32"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/item1Layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_height="wrap_content">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/wish_01"/>
+
+                <TextView
+                        android:id="@+id/item1NumTv"
+                        android:layout_width="wrap_content"
+                        tools:text="123"
+                        android:maxLines="1"
+                        android:gravity="end"
+                        android:ellipsize="end"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginStart="@dimen/dp_30"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_36"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="个"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_20"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_alignBottom="@+id/item1NumTv"
+                        android:layout_marginBottom="@dimen/dp_6"
+                        android:layout_toEndOf="@+id/item1NumTv"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/item1TxtTv"
+                        android:layout_width="wrap_content"
+                        android:text="我的认领"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:layout_below="@+id/item1NumTv"
+                        android:layout_marginStart="@dimen/dp_150"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:textSize="@dimen/sp_20"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:id="@+id/item2Layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/wish_02"/>
+
+                <TextView
+                        android:id="@+id/item2TxtTv"
+                        android:layout_width="wrap_content"
+                        android:text="我的发布"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_20"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/item2NumTv"
+                        android:layout_width="wrap_content"
+                        tools:text="12345"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_toEndOf="@+id/item2TxtTv"
+                        android:layout_below="@+id/item2TxtTv"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="-63dp"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:textSize="@dimen/sp_32"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:text="个"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_20"
+                        android:layout_alignBottom="@+id/item2NumTv"
+                        android:layout_toEndOf="@+id/item2NumTv"
+                        android:layout_height="wrap_content"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

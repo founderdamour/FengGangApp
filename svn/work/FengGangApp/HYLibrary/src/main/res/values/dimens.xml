@@ -1,0 +1,5 @@
+<resources>
+
+    <dimen name="titleBar_center">@dimen/sp_17</dimen>
+    <dimen name="titleBar_back">@dimen/sp_14</dimen>
+</resources>

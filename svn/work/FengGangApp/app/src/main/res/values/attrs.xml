@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--<declare-styleable name="RatingBar">-->
+    <!--&lt;!&ndash;未选中&ndash;&gt;-->
+    <!--<attr name="starEmptyRes" format="reference" />-->
+    <!--&lt;!&ndash;选中半个&ndash;&gt;-->
+    <!--<attr name="starHalfRes" format="reference" />-->
+    <!--&lt;!&ndash;选中全部&ndash;&gt;-->
+    <!--<attr name="starSelectedRes" format="reference" />-->
+    <!--&lt;!&ndash;星星的总数&ndash;&gt;-->
+    <!--<attr name="startTotalNumber" format="integer" />-->
+    <!--&lt;!&ndash;默认选中的数量 &ndash;&gt;-->
+    <!--<attr name="selectedNumber" format="float" />-->
+    <!--&lt;!&ndash;星星的间距&ndash;&gt;-->
+    <!--<attr name="starDistance" format="dimension" />-->
+    <!--&lt;!&ndash;星星的宽度&ndash;&gt;-->
+    <!--<attr name="starWidth" format="dimension" />-->
+    <!--&lt;!&ndash;星星的高度&ndash;&gt;-->
+    <!--<attr name="starHeight" format="dimension" />-->
+    <!--&lt;!&ndash;是不是只画整个星星，不画半个&ndash;&gt;-->
+    <!--<attr name="starIsFull" format="boolean" />-->
+    <!--</declare-styleable>-->
+
+    <declare-styleable name="PersonnelInfoDetailItemView">
+        <attr name="itemTitle" format="reference|string" />
+        <attr name="itemContent" format="reference|string" />
+    </declare-styleable>
+
+    <declare-styleable name="VerificationCodeView">
+        <!--输入框的数量-->
+        <attr name="icv_et_number" format="integer" />
+        <!--输入框的宽度-->
+        <attr name="icv_et_width" format="dimension|reference" />
+        <!--输入框之间的分割线-->
+        <attr name="icv_et_divider_drawable" format="reference" />
+        <!--输入框文字颜色-->
+        <attr name="icv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="icv_et_text_size" format="dimension|reference" />
+        <!--输入框获取焦点时边框-->
+        <attr name="icv_et_bg_focus" format="reference" />
+        <!--输入框没有焦点时边框-->
+        <attr name="icv_et_bg_normal" format="reference" />
+    </declare-styleable>
+
+
+</resources>

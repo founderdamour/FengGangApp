@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/itemIconIv"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_77"
+        android:src="@mipmap/app_icon"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/itemContentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textColor="#666666"
+            android:textSize="@dimen/sp_15"
+            tools:text="内容内容内容内容内容内容内容内容内容容内容内容内容内容内容内容" />
+
+        <TextView
+            android:id="@+id/itemTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:textColor="#999999"
+            android:textSize="@dimen/sp_15"
+            tools:text="2019-09-13" />
+
+    </RelativeLayout>
+
+</LinearLayout>

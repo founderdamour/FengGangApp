@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tc_list_title">#666666</color>
+    <color name="tc_list_sub">#999999</color>
+    <color name="tc_list_tip">#B0B0B0</color>
+
+    <color name="my_white">#888888</color>
+    <color name="white">#888888</color>
+</resources>

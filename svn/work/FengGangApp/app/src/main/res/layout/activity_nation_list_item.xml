@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemRootView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:background="@drawable/selector_bg_white_square"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dp_16"
+    tools:context=".view.main.bm.BmIndexOrgListActivity">
+
+    <ImageView
+        android:id="@+id/moreIcon"
+        android:layout_width="@dimen/dp_36"
+        android:layout_height="@dimen/dp_36"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/dp_8"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/more" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/moreIcon"
+        android:singleLine="true"
+        android:text="TextView"
+        android:textColor="@color/tc_list_title"
+        android:textSize="@dimen/sp_16" />
+
+</RelativeLayout>

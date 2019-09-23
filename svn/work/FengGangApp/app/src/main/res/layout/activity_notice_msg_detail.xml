@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <include layout="@layout/title_bar_normal"/>
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/titleTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:gravity="center"
+                    android:textColor="@color/tc_list_title"
+                    tools:text="业主你好,您本月的停车费"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                    android:id="@+id/contentTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:lineSpacingMultiplier="1.3"
+                    android:textColor="@color/tc_list_title"
+                    tools:text="业主你好,您本月的停车费还未上交，请您于本月30日之前通过您手机上的物业系统系统或到社区综合服务中心窗口缴纳，谢谢！"
+                    android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                    android:id="@+id/timeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2019年2月14日 15:49:45"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:textColor="@color/tc_list_title"
+                    android:textSize="@dimen/sp_15"/>
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

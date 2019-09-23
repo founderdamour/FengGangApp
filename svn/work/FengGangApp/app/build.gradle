@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.zkhy.community"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 100
+        versionName "1.1.8"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    // 签名
+    signingConfigs {
+        release {
+            storeFile file('zkhy_release.jks')
+            storePassword 'Abc123456789'
+            keyAlias 'Abc1_9'
+            keyPassword 'Abc123456789'
+        }
+        debug {
+            storeFile file('zkhy_debug.jks')
+            storePassword 'Abc123456789'
+            keyAlias 'Abc1_9'
+            keyPassword 'Abc123456789'
+        }
+        buildTypes {
+            debug {
+                signingConfig signingConfigs.debug
+            }
+            release {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "凤岗_v${defaultConfig.versionName}_${defaultConfig.versionCode}_${buildType.name}_${new Date().format("MMddHH")}.apk"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // lib
+    implementation project(':HYLibrary')
+    // 依赖库
+    implementation 'com.alibaba:fastjson:1.2.56'
+    implementation 'com.contrarywind:Android-PickerView:4.1.7'
+
+    implementation 'com.xingliuhua:xlhratingbar_lib:2.1'
+    implementation 'com.github.sinothk.AndroidRTC:AndroidRTC:2.0.0722'
+}

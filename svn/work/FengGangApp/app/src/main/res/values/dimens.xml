@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="swsw">@dimen/dp_48</dimen>
+    <dimen name="scroll_tab_text_size">@dimen/sp_14</dimen>
+
+</resources>

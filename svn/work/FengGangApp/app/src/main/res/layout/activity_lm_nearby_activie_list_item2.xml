@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/itemRootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/selector_bg_white_square_round"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_10"
+        tools:context=".view.main.bm.BmIndexOrgListActivity">
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/tc_list_title"
+            android:textSize="@dimen/sp_16"
+            tools:text="场所名称" />
+
+        <ImageView
+            android:id="@+id/imgIv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_120"
+            android:layout_marginTop="@dimen/dp_6"
+            android:scaleType="centerCrop" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:adjustViewBounds="true"
+                android:src="@drawable/clock_blue" />
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:singleLine="true"
+                android:textColor="@color/tc_list_sub"
+                android:textSize="@dimen/sp_13"
+                tools:text="活动时间：2019年1月18日 15:53:27" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:adjustViewBounds="true"
+                android:src="@drawable/location_blue" />
+
+            <TextView
+                android:id="@+id/addressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_6"
+                android:singleLine="true"
+                android:textColor="@color/tc_list_sub"
+                android:textSize="@dimen/sp_13"
+                tools:text="开始时间：2019年1月18日 15:53:27" />
+        </LinearLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/addressTv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/dp_3"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@color/tc_list_sub"-->
+        <!--android:textSize="@dimen/sp_13"-->
+        <!--android:visibility="gone"-->
+        <!--tools:text="场所地址场所地址场所地址场所地址场所地址场所地址场所地址" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/lastLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/app_bg" />
+</LinearLayout>

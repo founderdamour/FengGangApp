@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_bar_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/describeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_16"
+            android:background="@color/app_bg"
+            android:gravity="start"
+            android:hint="说点内容 ... "
+            android:minLines="5"
+            android:padding="@dimen/dp_8"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:visibility="gone"
+            android:layout_margin="@dimen/dp_12" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRvAlbumSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:padding="@dimen/dp_20" />
+
+    </LinearLayout>
+</LinearLayout>

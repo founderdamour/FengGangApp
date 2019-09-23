@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.zkhy.community"
+        applicationId "com.zkhy.fenggang.community"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 100

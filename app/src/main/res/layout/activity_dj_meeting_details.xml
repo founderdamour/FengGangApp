@@ -352,7 +352,7 @@
                         android:textColor="@color/tc_list_sub"
                         android:textSize="@dimen/sp_14" />
 
-                    <com.zkhy.community.widget.MeetFileListView
+                    <com.zkhy.fenggang.community.widget.MeetFileListView
                         android:id="@+id/meetingMaterialFileList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -375,7 +375,7 @@
                         android:textColor="@color/tc_list_sub"
                         android:textSize="@dimen/sp_14" />
 
-                    <com.zkhy.community.widget.MeetFileListView
+                    <com.zkhy.fenggang.community.widget.MeetFileListView
                         android:id="@+id/meetingAbstractFileList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -398,7 +398,7 @@
                         android:textColor="@color/tc_list_sub"
                         android:textSize="@dimen/sp_14" />
 
-                    <com.zkhy.community.widget.MeetFileListView
+                    <com.zkhy.fenggang.community.widget.MeetFileListView
                         android:id="@+id/meetingDecideFileList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

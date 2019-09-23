@@ -7,35 +7,35 @@
 
     <include layout="@layout/title_bar_comm" />
 
-    <com.zkhy.community.view.custom.PersonnelInfoDetailItemView
+    <com.zkhy.fenggang.community.view.custom.PersonnelInfoDetailItemView
         android:id="@+id/nameItemView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemContent="杨某某"
         app:itemTitle="姓名" />
 
-    <com.zkhy.community.view.custom.PersonnelInfoDetailItemView
+    <com.zkhy.fenggang.community.view.custom.PersonnelInfoDetailItemView
         android:id="@+id/sexItemView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemContent="男"
         app:itemTitle="性别" />
 
-    <com.zkhy.community.view.custom.PersonnelInfoDetailItemView
+    <com.zkhy.fenggang.community.view.custom.PersonnelInfoDetailItemView
         android:id="@+id/ageItemView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemContent="30"
         app:itemTitle="年龄" />
 
-    <com.zkhy.community.view.custom.PersonnelInfoDetailItemView
+    <com.zkhy.fenggang.community.view.custom.PersonnelInfoDetailItemView
         android:id="@+id/IdCardItemView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemContent="522225199401012345"
         app:itemTitle="身份证号" />
 
-    <com.zkhy.community.view.custom.PersonnelInfoDetailItemView
+    <com.zkhy.fenggang.community.view.custom.PersonnelInfoDetailItemView
         android:id="@+id/contactPhoneItemView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

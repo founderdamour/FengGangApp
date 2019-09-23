@@ -26,7 +26,7 @@
             android:textSize="@dimen/sp_18"
             tools:text="验证码已发送至182****2704，请查收"/>
 
-    <com.zkhy.community.view.custom.VerificationCodeView
+    <com.zkhy.fenggang.community.view.custom.VerificationCodeView
             android:id="@+id/verCodeView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

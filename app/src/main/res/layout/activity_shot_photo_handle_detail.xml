@@ -335,7 +335,7 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <com.zkhy.community.widget.ShotPhotoHandleDetailListView
+                    <com.zkhy.fenggang.community.widget.ShotPhotoHandleDetailListView
                         android:id="@+id/doneResultView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

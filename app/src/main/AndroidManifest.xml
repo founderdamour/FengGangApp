@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.zkhy.community">
+    package="com.zkhy.fenggang.community">
 
     <!-- Normal Permissions 不需要运行时注册 -->
     <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
@@ -152,7 +152,7 @@
             android:name=".view.main.lm.LmStadiumDetailsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zkhy.comm.plugin.activity.WebPageActivity"
+            android:name="com.zkhy.fenggang.comm.plugin.activity.WebPageActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.main.lm.LmNearbyActiveDetailsActivity"
@@ -398,7 +398,7 @@
             android:name=".view.main.bm.BmHandleEmploymentDifficultySubmitActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.zkhy.comm.plugin.activity.KeyValueListActivity"
+            android:name="com.zkhy.fenggang.comm.plugin.activity.KeyValueListActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".view.main.dj.MeetReadStatusActivity"
@@ -451,7 +451,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.zkhy.comm.plugin.activity.WebPageTempActivity"
+            android:name="com.zkhy.fenggang.comm.plugin.activity.WebPageTempActivity"
             android:hardwareAccelerated="true" />
 
         <activity

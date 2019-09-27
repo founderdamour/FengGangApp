@@ -7,6 +7,7 @@ import com.sinothk.comm.utils.PreferUtil
 import com.sinothk.comm.utils.ToastUtil
 
 class MainApplication : Application() {
+
     override fun onCreate() {
         super.onCreate()
 

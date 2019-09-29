@@ -28,6 +28,7 @@ import com.zkhy.fenggang.community.view.main.dw.DWOpenActivity
 import com.zkhy.fenggang.community.view.main.km.HouseDocHomeActivity
 import com.zkhy.fenggang.community.view.main.mk.MkMonitoringSystemActivity
 import com.zkhy.fenggang.community.view.main.px.EmploymentListActivity
+import com.zkhy.fenggang.community.view.main.px.FgRentingListActivity
 import com.zkhy.fenggang.community.view.main.px.TrainListActivity
 import com.zkhy.fenggang.community.view.main.zm.LoveAllListActivity
 import com.zkhy.fenggang.community.view.main.zm.WishHomeActivity
@@ -184,7 +185,7 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
         px0Item.setOnClickListener(this)
         px1Item.setOnClickListener(this)
-
+        px2Item.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -654,6 +655,23 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
                     return
                 }
                 IntentUtil.openActivity(this, EmploymentListActivity::class.java)
+                        .start()
+            }
+
+            px2Item -> {
+                if (!DataCache.isAutoLogin()) {
+                    CommonDialog.Builder(this)
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
+                    return
+                }
+                IntentUtil.openActivity(this, FgRentingListActivity::class.java)
                         .start()
             }
         }

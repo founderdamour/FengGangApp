@@ -22,51 +22,43 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/titleTv"
+                android:id="@+id/personInfoTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:background="@color/white"
-                android:gravity="center"
-                android:paddingStart="@dimen/dp_40"
+                android:paddingStart="@dimen/dp_10"
                 android:paddingTop="@dimen/dp_10"
-                android:paddingEnd="@dimen/dp_40"
-                android:textColor="#333333"
-                android:textSize="@dimen/sp_15"
-                tools:text="标标题标题标题题" />
+                android:paddingEnd="@dimen/dp_0"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_13"
+                tools:text="张三   安心部门  18888888888" />
 
-            <RelativeLayout
+            <TextView
+                android:id="@+id/houseInfoTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_0"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_13"
+                tools:text="北京市海淀区(1000/30)" />
+
+            <TextView
+                android:id="@+id/timeTv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/dp_5"
-                android:background="@color/white">
-
-                <TextView
-                    android:id="@+id/personInfoTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:paddingStart="@dimen/dp_10"
-                    android:paddingTop="@dimen/dp_10"
-                    android:paddingEnd="@dimen/dp_0"
-                    android:paddingBottom="@dimen/dp_5"
-                    android:textColor="#999999"
-                    android:textSize="@dimen/sp_13"
-                    tools:text="张三   安心部门" />
-
-                <TextView
-                    android:id="@+id/timeTv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:paddingStart="@dimen/dp_0"
-                    android:paddingEnd="@dimen/dp_10"
-                    android:textColor="#999999"
-                    android:textSize="@dimen/sp_13"
-                    tools:text="2019-09-13" />
-
-            </RelativeLayout>
+                android:background="@color/white"
+                android:gravity="end"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_5"
+                android:textColor="#77000000"
+                android:textSize="@dimen/sp_13"
+                tools:text="2019-09-13" />
 
             <TextView
                 android:id="@+id/contentTv"

@@ -11,18 +11,17 @@ import android.text.Html
 import android.view.View
 import com.sinothk.comm.utils.DateUtil
 import com.zkhy.fenggang.community.R
-import com.zkhy.fenggang.community.model.bean.TrainEmploymentEntity
+import com.zkhy.fenggang.community.model.bean.FgRentingEntity
 import com.zkhy.library.base.activity.TitleBarBaseActivity
-import kotlinx.android.synthetic.main.activity_train_employment_detail.*
+import kotlinx.android.synthetic.main.activity_fg_renting_detail.*
 import java.net.URL
 
 /**
- * 培训就业详情
+ * 房屋租赁详情
  */
-class TrainEmploymentDetailActivity : TitleBarBaseActivity() {
+class FgRentingDetailActivity : TitleBarBaseActivity() {
 
-    private var entity: TrainEmploymentEntity? = null
-    private var px: Int? = 0
+    private var entity: FgRentingEntity? = null
 
     private var mHandler: Handler = Handler(Handler.Callback { msg ->
         if (msg.what == 183) {
@@ -33,24 +32,22 @@ class TrainEmploymentDetailActivity : TitleBarBaseActivity() {
     })
 
     override fun getLayout(): Int {
-        return R.layout.activity_train_employment_detail
+        return R.layout.activity_fg_renting_detail
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTitleBar("房屋租赁详情")
         initData()
-        if (px == 0) {
-            setTitleBar("培训详情")
-        } else {
-            setTitleBar("就业详情")
-        }
         initView()
     }
 
     @SuppressLint("SetTextI18n")
     private fun initView() {
-        titleTv.text = entity!!.title
-        personInfoTv.text = entity!!.publishUserName + "  " + entity!!.deptName
+
+        personInfoTv.text = entity!!.deptName + "  " + entity!!.deptName + "  " + entity!!.phone
+        houseInfoTv.text = entity!!.address + "(" + entity!!.areaSize + "㎡，" + entity!!.price + "元)"
+
         timeTv.text = DateUtil.getDateStrByDate(entity!!.publishTime, "yyyy-MM-dd")
 
         Thread(Runnable {
@@ -82,7 +79,6 @@ class TrainEmploymentDetailActivity : TitleBarBaseActivity() {
     }
 
     private fun initData() {
-        px = intent.getIntExtra("px", 0)
-        entity = intent.getSerializableExtra("entity") as TrainEmploymentEntity?
+        entity = intent.getSerializableExtra("entity") as FgRentingEntity?
     }
 }

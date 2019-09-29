@@ -4,14 +4,21 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 培训就业实体
+ * 房屋租赁
  */
-public class TrainEmploymentEntity implements Serializable {
+public class FgRentingEntity implements Serializable {
 
     private String id;
 
-    // 1培训2就业
-    private int type;
+    private String address;
+
+    private String price;
+
+    private String areaSize;
+
+    private String phone;
+
+    private String deptName;
 
     // 0未发布1已发布
     private int publisState;
@@ -20,11 +27,7 @@ public class TrainEmploymentEntity implements Serializable {
 
     private Date publishTime;
 
-    private String title;
-
     private String publishUserName;
-
-    private String deptName;
 
     public String getId() {
         return id;
@@ -34,12 +37,36 @@ public class TrainEmploymentEntity implements Serializable {
         this.id = id;
     }
 
-    public int getType() {
-        return type;
+    public String getAddress() {
+        return address;
     }
 
-    public void setType(int type) {
-        this.type = type;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getDeptName() {
+        return deptName;
+    }
+
+    public void setDeptName(String deptName) {
+        this.deptName = deptName;
     }
 
     public int getPublisState() {
@@ -66,14 +93,6 @@ public class TrainEmploymentEntity implements Serializable {
         this.publishTime = publishTime;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getPublishUserName() {
         return publishUserName;
     }
@@ -82,11 +101,11 @@ public class TrainEmploymentEntity implements Serializable {
         this.publishUserName = publishUserName;
     }
 
-    public String getDeptName() {
-        return deptName;
+    public String getAreaSize() {
+        return areaSize;
     }
 
-    public void setDeptName(String deptName) {
-        this.deptName = deptName;
+    public void setAreaSize(String areaSize) {
+        this.areaSize = areaSize;
     }
 }

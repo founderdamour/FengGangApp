@@ -839,4 +839,13 @@ public interface AllApi {
      */
     @POST("api/biz/fgTrainJob/page")
     Observable<BaseData<PageData<TrainEmploymentEntity>>> loadPxJyList(@Body PageReq<CommReq> pageParam);
+
+    /**
+     * 房屋租赁
+     *
+     * @param pageParam
+     * @return
+     */
+    @POST("api/biz/fgRenting/page")
+    Observable<BaseData<PageData<FgRentingEntity>>> loadFgRentingList(@Body PageReq<CommReq> pageParam);
 }

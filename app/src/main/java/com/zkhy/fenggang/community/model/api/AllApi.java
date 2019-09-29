@@ -830,4 +830,13 @@ public interface AllApi {
      */
     @GET("KJWeb/RYDW/JxrydpJson.aspx")
     Observable<ArrayList<MkPersonShowEntity>> loadMkPerson(@Query("kbh") String kbh);
+
+    /**
+     * 培训就业列表
+     *
+     * @param pageParam
+     * @return
+     */
+    @POST("api/biz/fgTrainJob/page")
+    Observable<BaseData<PageData<TrainEmploymentEntity>>> loadPxJyList(@Body PageReq<CommReq> pageParam);
 }

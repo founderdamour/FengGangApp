@@ -27,6 +27,8 @@ import com.zkhy.fenggang.community.view.main.dj.PropagandaSysListActivity
 import com.zkhy.fenggang.community.view.main.dw.DWOpenActivity
 import com.zkhy.fenggang.community.view.main.km.HouseDocHomeActivity
 import com.zkhy.fenggang.community.view.main.mk.MkMonitoringSystemActivity
+import com.zkhy.fenggang.community.view.main.px.EmploymentListActivity
+import com.zkhy.fenggang.community.view.main.px.TrainListActivity
 import com.zkhy.fenggang.community.view.main.zm.LoveAllListActivity
 import com.zkhy.fenggang.community.view.main.zm.WishHomeActivity
 import com.zkhy.fenggang.community.view.mine.UserInfoSimpleEditActivity
@@ -43,6 +45,7 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
         const val LM: String = "LM"
         const val KM: String = "KM"
         const val ZM: String = "ZM"
+        const val PX: String = "PX"
     }
 
     override fun getLayout(): Int = R.layout.activity_app_class
@@ -88,6 +91,11 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
             ZM -> {
                 scrollView.post {
                     scrollView.scrollTo(0, zmLayout.top)
+                }
+            }
+            PX -> {
+                scrollView.post {
+                    scrollView.scrollTo(0, pxLayout.top)
                 }
             }
             else -> {
@@ -173,6 +181,10 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
         zm8Item.setOnClickListener(this)
         zm9Item.setOnClickListener(this)
         zm10Item.setOnClickListener(this)
+
+        px0Item.setOnClickListener(this)
+        px1Item.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View?) {
@@ -186,14 +198,14 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(this)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(this, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
@@ -208,14 +220,14 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(this)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(this, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
@@ -226,9 +238,9 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
             }
             dj3Item -> {
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/fg-h5-webapp/feedback.html")
-                    .putStringExtra("webTitle", "群众反馈")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/fg-h5-webapp/feedback.html")
+                        .putStringExtra("webTitle", "群众反馈")
+                        .start()
             }
             dj4Item -> {
                 val info = AppUtil.startOtherApp(this, "cn.xuexi.android", null)
@@ -257,25 +269,25 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 //                }
 
                 IntentUtil.openActivity(this, PropagandaSysListActivity::class.java)
-                    .start()
+                        .start()
             }
 
             dj6Item -> {
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(this)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(this, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
                 IntentUtil.openActivity(this@AppClassActivity, DWOpenActivity::class.java)
-                    .start()
+                        .start()
             }
 
             // 安民
@@ -285,17 +297,17 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
                 val needTip: Boolean = DataCache.getNeedTipInputUserInfo()
                 if (needTip) {
                     CommonDialog.Builder(this)
-                        .setTitle("重要提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
-                        .setPositiveButton("确定") {
+                            .setTitle("重要提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
+                            .setPositiveButton("确定") {
 
-                            IntentUtil.openActivity(this, UserInfoSimpleEditActivity::class.java)
-                                .putIntExtra("fromType", 0)
-                                .start()
+                                IntentUtil.openActivity(this, UserInfoSimpleEditActivity::class.java)
+                                        .putIntExtra("fromType", 0)
+                                        .start()
 
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            }.setNegativeButton("取消") {
+                            }.show()
                 } else {
                     IntentUtil.openActivity(this, AmLawHomeActivity::class.java).start()
                 }
@@ -305,9 +317,9 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
             }
             am2Item -> { //
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/yjyl")
-                    .putStringExtra("webTitle", "应急演练")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/yjyl")
+                        .putStringExtra("webTitle", "应急演练")
+                        .start()
             }
             am3Item -> { // 智慧门禁
                 val info = AppUtil.startOtherApp(this, "com.howjoy.watchfield", null)
@@ -327,22 +339,22 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
             am5Item -> { //宠物管理
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/cwgl")
-                    .putStringExtra("webTitle", "宠物管理")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/cwgl")
+                        .putStringExtra("webTitle", "宠物管理")
+                        .start()
             }
 
             am6Item -> { // 网上信访
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(this)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(this, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
@@ -351,12 +363,12 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
             am7Item -> { //安全生产
                 IntentUtil.openActivity(this@AppClassActivity, SafeWorkHomeActivity::class.java)
-                    .start()
+                        .start()
             }
 
             am8Item -> { //煤矿监控
                 IntentUtil.openActivity(this@AppClassActivity, MkMonitoringSystemActivity::class.java)
-                    .start()
+                        .start()
             }
 
             // 便民
@@ -371,17 +383,17 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
                 val needTip: Boolean = DataCache.getNeedTipInputUserInfo()
                 if (needTip) {
                     CommonDialog.Builder(this)
-                        .setTitle("重要提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
-                        .setPositiveButton("确定") {
+                            .setTitle("重要提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage("\n继续使用应用前，需要完善\n\n用户的基本信息...\n")
+                            .setPositiveButton("确定") {
 
-                            IntentUtil.openActivity(this, UserInfoSimpleEditActivity::class.java)
-                                .putIntExtra("fromType", 0)
-                                .start()
+                                IntentUtil.openActivity(this, UserInfoSimpleEditActivity::class.java)
+                                        .putIntExtra("fromType", 0)
+                                        .start()
 
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            }.setNegativeButton("取消") {
+                            }.show()
                 } else {
                     IntentUtil.openActivity(this, BmHomeListActivity::class.java).start()
                 }
@@ -390,14 +402,14 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
             bm2Item -> { // 预约排号
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(this)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(this, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
                 IntentUtil.openActivity(this, BmOrderHomeActivity::class.java).start()
@@ -408,14 +420,14 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
             bm4Item -> { // 便民查询
                 if (!DataCache.isAutoLogin()) {
                     CommonDialog.Builder(this)
-                        .setTitle("登录提示")
-                        .setCanceledOnTouchOutside(false)
-                        .setMessage(resources.getString(R.string.login_tip))
-                        .setPositiveButton("登录") {
-                            // 前往登录
-                            IntentUtil.openActivity(this, LoginActivity::class.java).start()
-                        }.setNegativeButton("取消") {
-                        }.show()
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
                     return
                 }
 
@@ -431,39 +443,39 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
             bm6Item -> { // 公积金服务
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "https://wsdt.zygjj.cn/")
-                    .putStringExtra("webTitle", "公积金服务")
-                    .start()
+                        .putStringExtra("webUrl", "https://wsdt.zygjj.cn/")
+                        .putStringExtra("webTitle", "公积金服务")
+                        .start()
             }
 
             bm7Item -> { // 物业管理
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/wygl")
-                    .putStringExtra("webTitle", "物业管理")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/wygl")
+                        .putStringExtra("webTitle", "物业管理")
+                        .start()
             }
 
             bm8Item -> { // 社区志愿者
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/zyzgl")
-                    .putStringExtra("webTitle", "社区志愿者")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/zyzgl")
+                        .putStringExtra("webTitle", "社区志愿者")
+                        .start()
             }
 
             bm9Item -> { // 家政服务
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/jzfw")
-                    .putStringExtra("webTitle", "家政服务")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/jzfw")
+                        .putStringExtra("webTitle", "家政服务")
+                        .start()
             }
             bm10Item -> { // 房屋中介
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra(
-                        "webUrl",
-                        "https://zunyi.58.com/huichuanqu/chuzu/?PGTID=0d3090a7-01dc-45d5-b3f8-409aff9b2c94&ClickID=2"
-                    )
-                    .putStringExtra("webTitle", "房屋中介")
-                    .start()
+                        .putStringExtra(
+                                "webUrl",
+                                "https://zunyi.58.com/huichuanqu/chuzu/?PGTID=0d3090a7-01dc-45d5-b3f8-409aff9b2c94&ClickID=2"
+                        )
+                        .putStringExtra("webTitle", "房屋中介")
+                        .start()
             }
             bm11Item -> { // 智慧停车
 //                IntentUtil.openActivity(this, WebPageActivity::class.java)
@@ -476,12 +488,12 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
             bm12Item -> { // 全民跑跑
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra(
-                        "webUrl",
-                        "https://www.pao360.com/paoapi/hcapph5/index.php"
-                    )
-                    .putStringExtra("webTitle", "全民跑跑")
-                    .start()
+                        .putStringExtra(
+                                "webUrl",
+                                "https://www.pao360.com/paoapi/hcapph5/index.php"
+                        )
+                        .putStringExtra("webTitle", "全民跑跑")
+                        .start()
             }
 
             // 乐民
@@ -494,24 +506,24 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
             lm2Item -> { // 全民阅读
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "https://wk3.bookan.com.cn/?id=20730&token=&productId=5!#/book/596")
-                    .putStringExtra("webTitle", "全民阅读")
-                    .start()
+                        .putStringExtra("webUrl", "https://wk3.bookan.com.cn/?id=20730&token=&productId=5!#/book/596")
+                        .putStringExtra("webTitle", "全民阅读")
+                        .start()
             }
 
             lm4Item -> { // 文化中心
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/whzx")
-                    .putStringExtra("webTitle", "文化中心")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/whzx")
+                        .putStringExtra("webTitle", "文化中心")
+                        .start()
             }
 
             // 康民
             km0Item -> { // 预约挂号
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://yxy.zy20.com/hosreg.php?orgid=1")
-                    .putStringExtra("webTitle", "预约挂号")
-                    .start()
+                        .putStringExtra("webUrl", "http://yxy.zy20.com/hosreg.php?orgid=1")
+                        .putStringExtra("webTitle", "预约挂号")
+                        .start()
             }
 
             km1Item -> {
@@ -520,26 +532,26 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
 
             km2Item -> {
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/xlzx")
-                    .putStringExtra("webTitle", "心理咨询")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/xlzx")
+                        .putStringExtra("webTitle", "心理咨询")
+                        .start()
             }
 
             km4Item -> {
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/tyss")
-                    .putStringExtra("webTitle", "体育赛事")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/tyss")
+                        .putStringExtra("webTitle", "体育赛事")
+                        .start()
             }
 
             km5Item -> {
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra(
-                        "webUrl",
-                        "http://mp.weixin.qq.com/mp/homepage?__biz=MzU0ODg4MjA3MQ==&hid=3&sn=17601cc040a52aa85e02ac5fdfd9c327&scene=18#wechat_redirect"
-                    )
-                    .putStringExtra("webTitle", "医疗保险")
-                    .start()
+                        .putStringExtra(
+                                "webUrl",
+                                "http://mp.weixin.qq.com/mp/homepage?__biz=MzU0ODg4MjA3MQ==&hid=3&sn=17601cc040a52aa85e02ac5fdfd9c327&scene=18#wechat_redirect"
+                        )
+                        .putStringExtra("webTitle", "医疗保险")
+                        .start()
             }
 
             //
@@ -551,66 +563,99 @@ class AppClassActivity : TitleBarBaseActivity(), View.OnClickListener {
             }
             zm2Item -> { // 创业就业
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://www.juxianw.net/")
-                    .putStringExtra("webTitle", "创业就业")
-                    .start()
+                        .putStringExtra("webUrl", "http://www.juxianw.net/")
+                        .putStringExtra("webTitle", "创业就业")
+                        .start()
             }
 
             zm3Item -> { //医疗救助
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/yljz")
-                    .putStringExtra("webTitle", "医疗救助")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/yljz")
+                        .putStringExtra("webTitle", "医疗救助")
+                        .start()
             }
 
             zm5Item -> { //教育帮扶
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/jybf")
-                    .putStringExtra("webTitle", "教育帮扶")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/jybf")
+                        .putStringExtra("webTitle", "教育帮扶")
+                        .start()
             }
 
             zm6Item -> {
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://www.zyhc.gov.cn/zwgk/zdlygk/ggzypz/czzfbzajgc/")
-                    .putStringExtra("webTitle", "公租房管理")
-                    .start()
+                        .putStringExtra("webUrl", "http://www.zyhc.gov.cn/zwgk/zdlygk/ggzypz/czzfbzajgc/")
+                        .putStringExtra("webTitle", "公租房管理")
+                        .start()
             }
 
             zm7Item -> { //公益活动
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/gyhd")
-                    .putStringExtra("webTitle", "公益活动")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/gyhd")
+                        .putStringExtra("webTitle", "公益活动")
+                        .start()
             }
 
             zm8Item -> { //养老机构
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/yljg")
-                    .putStringExtra("webTitle", "养老机构")
-                    .start()
+                        .putStringExtra("webUrl", "http://58.16.181.23:7070/site/index.html#/yljg")
+                        .putStringExtra("webTitle", "养老机构")
+                        .start()
             }
 
             zm9Item -> { // 尊品直供
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra(
-                        "webUrl",
-                        "https://wap.youcunapp.com/#/shop/custom/091b23d41a1f4805a2fd98f43acce6b5?shopNo=091b23d41a1f4805a2fd98f43acce6b5"
-                    )
-                    .putStringExtra("webTitle", "遵品直供")
-                    .start()
+                        .putStringExtra(
+                                "webUrl",
+                                "https://wap.youcunapp.com/#/shop/custom/091b23d41a1f4805a2fd98f43acce6b5?shopNo=091b23d41a1f4805a2fd98f43acce6b5"
+                        )
+                        .putStringExtra("webTitle", "遵品直供")
+                        .start()
             }
 
             zm10Item -> { // 青找
                 IntentUtil.openActivity(this, WebPageActivity::class.java)
-                    .putStringExtra(
-                        "webUrl",
-                        "http://jw.wjuxiang.com/wx/index/index.html"
-                    )
-                    .putStringExtra("webTitle", "青找")
-                    .start()
+                        .putStringExtra(
+                                "webUrl",
+                                "http://jw.wjuxiang.com/wx/index/index.html"
+                        )
+                        .putStringExtra("webTitle", "青找")
+                        .start()
             }
 
+            px0Item -> {
+                if (!DataCache.isAutoLogin()) {
+                    CommonDialog.Builder(this)
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
+                    return
+                }
+                IntentUtil.openActivity(this, TrainListActivity::class.java)
+                        .start()
+            }
+
+            px1Item -> {
+                if (!DataCache.isAutoLogin()) {
+                    CommonDialog.Builder(this)
+                            .setTitle("登录提示")
+                            .setCanceledOnTouchOutside(false)
+                            .setMessage(resources.getString(R.string.login_tip))
+                            .setPositiveButton("登录") {
+                                // 前往登录
+                                IntentUtil.openActivity(this, LoginActivity::class.java).start()
+                            }.setNegativeButton("取消") {
+                            }.show()
+                    return
+                }
+                IntentUtil.openActivity(this, EmploymentListActivity::class.java)
+                        .start()
+            }
         }
     }
 }

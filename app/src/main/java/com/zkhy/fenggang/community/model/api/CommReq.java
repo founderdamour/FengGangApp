@@ -56,7 +56,6 @@ public class CommReq {
 //    private MsgsCenterType msgsType;
 
 
-
     // 注册
 //    {
 //        "registerIs": false,
@@ -131,6 +130,13 @@ public class CommReq {
      * 党务公开
      */
     private String openPartyType;
+
+    /**
+     * 培训就业类型
+     * <p>
+     * 1培训2就业
+     */
+    private int type;
 
     public String getOpenPartyType() {
         return openPartyType;
@@ -588,5 +594,13 @@ public class CommReq {
 
     public void setRead(Boolean read) {
         isRead = read;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 }

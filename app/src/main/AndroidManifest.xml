@@ -591,6 +591,18 @@
             android:name=".view.main.mk.MkPersonShowActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".view.main.px.TrainListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.px.EmploymentListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.main.px.TrainEmploymentDetailActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

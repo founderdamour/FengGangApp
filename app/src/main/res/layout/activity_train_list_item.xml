@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_12"
+    android:paddingEnd="@dimen/dp_5"
+    android:paddingBottom="@dimen/dp_12">
+
+    <TextView
+        android:id="@+id/itemTimeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:singleLine="true"
+        android:textColor="@color/tc_list_sub"
+        android:textSize="@dimen/sp_14"
+        tools:text="2018-12-24" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/itemTimeTv"
+        android:singleLine="true"
+        android:textColor="@color/tc_list_title"
+        android:textSize="@dimen/sp_16"
+        tools:text="张佳佳" />
+
+</RelativeLayout>

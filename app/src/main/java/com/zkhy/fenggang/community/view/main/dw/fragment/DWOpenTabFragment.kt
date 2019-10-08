@@ -112,7 +112,7 @@ class DWOpenTabFragment : RecycleViewBaseFragment(), AndroidExt2View {
         LoadingDialog.hidden()
     }
 
-    override fun loadComplete(resultData: Any?) {
+    override fun load2Complete(resultData: Any?) {
         if (loadingRecyclerView == null || emptyView == null) {
             return
         }
@@ -159,7 +159,7 @@ class DWOpenTabFragment : RecycleViewBaseFragment(), AndroidExt2View {
         }
     }
 
-    override fun load2Complete(resultData: Any?) {
+    override fun loadComplete(resultData: Any?) {
     }
 
     override fun loadingShow() {

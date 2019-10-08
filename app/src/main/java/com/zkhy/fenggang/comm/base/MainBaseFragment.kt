@@ -18,13 +18,16 @@ import com.sinothk.widget.bannerView.style1.ext.BannerUtil
 import com.zkhy.fenggang.community.R
 import com.zkhy.fenggang.comm.plugin.activity.WebPageActivity
 import com.zkhy.fenggang.community.model.api.BaseData
+import com.zkhy.fenggang.community.model.api.CommReq
 import com.zkhy.fenggang.community.model.api.PageData
 import com.zkhy.fenggang.community.model.api.PageReq
+import com.zkhy.fenggang.community.model.bean.DWOpenListEntity
 import com.zkhy.fenggang.community.model.bean.WechatEntity
 import com.zkhy.fenggang.community.model.bean.WechatParam
 import com.zkhy.fenggang.community.model.cache.DataCache
 import com.zkhy.fenggang.community.presenter.CommPresenter
 import com.zkhy.fenggang.community.presenter.DJPresenter
+import com.zkhy.fenggang.community.presenter.DWOpenPresenter
 import com.zkhy.library.mvp.AndroidExt2View
 import com.zkhy.library.utils.UnitUtil
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -41,6 +44,7 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
 
     var presenter: CommPresenter? = null
     private var presenter2: DJPresenter? = null
+    var dwOpenPresenter: DWOpenPresenter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -60,6 +64,7 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
 
         presenter = CommPresenter(this)
         presenter2 = DJPresenter(this)
+        dwOpenPresenter = DWOpenPresenter(this)
         initBanner()
 
 //        showBanner(getBannerData())
@@ -96,6 +101,17 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
         pageParam.data = vo
 
         presenter2?.loadPropagandaListData(pageParam)
+
+        val pageParam1 = PageReq<CommReq>()
+        pageParam1.pageNo = 1
+        pageParam1.pageSize = 3
+
+        val comm = CommReq()
+        comm.openPartyType = ""
+        comm.basicSystemType = "OPEN_PARTY_AFFAIRS"
+
+        pageParam1.data = comm
+        dwOpenPresenter!!.loadDWOpenAllList(pageParam1)
 
 
         val bannerList: ArrayList<BannerBean>? = DataCache.getHomeBannerInfo()
@@ -148,7 +164,7 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
         val result = resultData as BaseData<PageData<WechatEntity>>
         if (result.data != null && result.data != null && result.data.list.size > 0) {
 
-            val noticeList = ArrayList<String>()
+           // val noticeList = ArrayList<String>()
 
             // 实时网络数据
             val netDataList = ArrayList<BannerBean>()
@@ -159,14 +175,14 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
                     netDataList.add(BannerBean(pos.title, pos.thumbUrl, pos.url))
                 }
 
-                noticeList.add(pos.title)
+               // noticeList.add(pos.title)
             }
 
             showBanner(netDataList)
             DataCache.setHomeBannerInfo(netDataList)
 
-            initNoticeTxtView(noticeList)
-            DataCache.setNoticeTxtList(noticeList)
+           // initNoticeTxtView(noticeList)
+           // DataCache.setNoticeTxtList(noticeList)
 
         } else {
             // 没有网络数据，尝试加载缓存
@@ -186,6 +202,15 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
     abstract fun initNoticeTxtView(noticeList: ArrayList<String>)
 
     override fun load2Complete(resultData: Any?) {
+        val result: BaseData<PageData<DWOpenListEntity>> = resultData as BaseData<PageData<DWOpenListEntity>>
+        val noticeList = ArrayList<String>()
+        if (result.data != null || result.data.list != null || result.data.list.size > 0) {
+            for (index: Int in result.data.list.indices){
+                noticeList.add(result.data.list[index].title)
+            }
+            initNoticeTxtView(noticeList)
+            DataCache.setNoticeTxtList(noticeList)
+        }
 
 //        if (resultData == null) {
 //            // 没有缓存显示默认图片

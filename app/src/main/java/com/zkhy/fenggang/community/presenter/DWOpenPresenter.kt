@@ -40,7 +40,7 @@ class DWOpenPresenter(var view: AndroidExt2View?) {
 
                 override fun onNext(resultData: BaseData<PageData<DWOpenListEntity>>?) {
                     if (resultData != null) {
-                        view?.loadComplete(resultData)
+                        view?.load2Complete(resultData)
                     } else {
                         view?.showTip("服务器无数据返回...")
                     }

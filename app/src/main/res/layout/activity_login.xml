@@ -39,7 +39,7 @@
             android:layout_below="@+id/loginLogo"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dp_12"
-            android:text="汇·红云平台"
+            android:text="凤翔平台"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_18" />
 

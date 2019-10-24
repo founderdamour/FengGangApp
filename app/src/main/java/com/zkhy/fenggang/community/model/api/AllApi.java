@@ -32,10 +32,10 @@ public interface AllApi {
      * @return
      */
     @Multipart
-    @POST("api/admin/file/upload")
+    @POST("wmapi/admin/file/upload")
     Observable<BaseData<AttachmentEntity>> uploadFile(@Query("bizId") String bizId, @Query("bizType") String bizType, @Part MultipartBody.Part file);
 
-    @POST("api/admin/file/remove")
+    @POST("wmapi/admin/file/remove")
     Observable<BaseData<Boolean>> delFileSysById(@Query("ids[]") String[] ids);
 
     /**
@@ -44,7 +44,7 @@ public interface AllApi {
      * @param userPhone
      * @return
      */
-    @POST("api/biz/wmUser/register/sms/send")
+    @POST("wmapi/biz/wmUser/register/sms/send")
     Observable<BaseData<String>> registerCode(@Query("phone") String userPhone);
 
     /**
@@ -53,7 +53,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/wmUser/reset/password/update")
+    @POST("wmapi/biz/wmUser/reset/password/update")
     Observable<BaseData<String>> changeUserPwd(@Body CommReq pageParam);
 
     /**
@@ -62,7 +62,7 @@ public interface AllApi {
      * @param userId
      * @return
      */
-    @POST("api/biz/wmUser/perfect/info/validate")
+    @POST("wmapi/biz/wmUser/perfect/info/validate")
     Observable<BaseData<String>> checkUserInfo(@Query("userId") String userId);
 
     /**
@@ -71,10 +71,10 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/wmUser/register/save")
+    @POST("wmapi/biz/wmUser/register/save")
     Observable<BaseData<RegisterEntity>> registerUser(@Body CommReq pageParam);
 
-    @GET("api/admin/user/usertoken")
+    @GET("wmapi/admin/user/usertoken")
     Observable<BaseData<TerminalLoginDTO>> login(@Query("username") String account, @Query("password") String pwd);
 
     /**
@@ -82,7 +82,7 @@ public interface AllApi {
      *
      * @return
      */
-    @GET("api/biz/wmUser/getUserInfo")
+    @GET("wmapi/biz/wmUser/getUserInfo")
     Observable<BaseData<WmUser>> loadingUserInfo();
 
     /**
@@ -91,7 +91,7 @@ public interface AllApi {
      * @param user
      * @return
      */
-    @POST("api/biz/wmUser/update")
+    @POST("wmapi/biz/wmUser/update")
     Observable<BaseData<WmUser>> updateUserInfo(@Body WmUser user);
 
     /**
@@ -100,7 +100,7 @@ public interface AllApi {
      * @param account
      * @return
      */
-    @GET("api/admin/user/account/get")
+    @GET("wmapi/admin/user/account/get")
     Observable<BaseData<WmUser>> getUserPhoneByAccount(@Query("account") String account);
 
     /**
@@ -109,7 +109,7 @@ public interface AllApi {
      * @param idcard
      * @return
      */
-    @GET("api/admin/user/idcard/get")
+    @GET("wmapi/admin/user/idcard/get")
     Observable<BaseData<WmUser>> getUserAccountInfoByAccountOrIDCard(@Query("idcard") String idcard);
 
     /**
@@ -118,7 +118,7 @@ public interface AllApi {
      * @param phone
      * @return
      */
-    @POST("api/biz/wmUser/reset/password/sms/send")
+    @POST("wmapi/biz/wmUser/reset/password/sms/send")
     Observable<BaseData<String>> resetPwdPhoneCode(@Query("phone") String phone);
 
     /**
@@ -126,7 +126,7 @@ public interface AllApi {
      *
      * @return
      */
-    @GET("api/biz/CommonExt/find")
+    @GET("wmapi/biz/CommonExt/find")
     Observable<BaseData<ArrayList<DepartmentEntity>>> loadDepartmentList();
 
     /**
@@ -135,7 +135,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/BmFlowGuidance/page")
+    @POST("wmapi/biz/BmFlowGuidance/page")
     Observable<BaseData<PageData<BizDeptFunctionEntity>>> loadBizIndexList(@Body PageReq pageParam);
 
     /**
@@ -144,7 +144,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/BmFlowGuidance/find")
+    @GET("wmapi/biz/BmFlowGuidance/find")
     Observable<BaseData<FlowInfoEntity>> loadHandleInfo(@Query("id") String id);
 
 
@@ -154,7 +154,7 @@ public interface AllApi {
      * @param appnoTypeCode
      * @return
      */
-    @GET("api/biz/appointment/getAppointmentInfo")
+    @GET("wmapi/biz/appointment/getAppointmentInfo")
     Observable<BaseData<AppointmentBaseEntity>> getBmOrderDate(@Query("appnoTypeCode") String appnoTypeCode);
 
     /**
@@ -164,7 +164,7 @@ public interface AllApi {
      * @param currDate
      * @return
      */
-    @GET("api/biz/appointment/getAppByDateOrId")
+    @GET("wmapi/biz/appointment/getAppByDateOrId")
     Observable<BaseData<AppointmentDayEntity>> getAppointmentStateByDate(@Query("id") String id, @Query("currDate") String currDate);
 
     /**
@@ -173,7 +173,7 @@ public interface AllApi {
      * @param dto
      * @return
      */
-    @POST("api/biz/appointment/save")
+    @POST("wmapi/biz/appointment/save")
     Observable<BaseData<AppointmentResultEntity>> submitBmOrder(@Body AppointmentVo dto);
 
     /**
@@ -182,7 +182,7 @@ public interface AllApi {
      * @param vo
      * @return
      */
-    @POST("api/biz/personwork/flow/save")
+    @POST("wmapi/biz/personwork/flow/save")
     Observable<BaseData<PersonWorkEntity>> personWorkFlowSave(@Body PersonWorkVo vo);
 
     /**
@@ -192,7 +192,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/personwork/flow/detail/get")
+    @GET("wmapi/biz/personwork/flow/detail/get")
     Observable<BaseData<HandleDetailsEntity>> loadHandleDetails(@Query("flowId") int flowId, @Query("id") String id);
 
     /**
@@ -201,7 +201,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/personwork/flow/person/page")
+    @POST("wmapi/biz/personwork/flow/person/page")
     Observable<BaseData<PageData<HandleProgressEntity>>> loadAllHandleProgressList(@Body PageReq pageParam);
 
     /**
@@ -210,7 +210,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/culturepalce/findList")
+    @POST("wmapi/biz/culturepalce/findList")
     Observable<BaseData<PageData<StadiumEntity>>> loadStadiumList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -219,7 +219,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/culturepalce/getById")
+    @GET("wmapi/biz/culturepalce/getById")
     Observable<BaseData<StadiumEntity>> loadStadiumDetails(@Query("id") String id);
 
     /**
@@ -228,7 +228,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/aroundactivity/findList")
+    @POST("wmapi/biz/aroundactivity/findList")
     Observable<BaseData<PageData<NearbyActiveEntity>>> loadNearbyActiveList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -237,7 +237,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/aroundactivity/getById")
+    @GET("wmapi/biz/aroundactivity/getById")
     Observable<BaseData<NearbyActiveEntity>> loadNearbyActiveDetails(@Query("id") String id);
 
     /**
@@ -246,7 +246,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/lawyerQuestion/page")
+    @POST("wmapi/biz/lawyerQuestion/page")
     Observable<BaseData<PageData<LawQuestionEntity>>> loadLawQAList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -254,7 +254,7 @@ public interface AllApi {
      *
      * @return
      */
-    @POST("api/biz/lawyerConsult/getMyConsult")
+    @POST("wmapi/biz/lawyerConsult/getMyConsult")
     Observable<BaseData<PageData<LawQuestionEntity>>> loadLawConsultHistoryList(@Body PageReq<String> pageParam);
 
     /**
@@ -262,7 +262,7 @@ public interface AllApi {
      *
      * @return
      */
-    @GET("api/biz/lawyer/getById")
+    @GET("wmapi/biz/lawyer/getById")
     Observable<BaseData<LawyerInfoEntity>> loadLawyerDetail(@Query("id") String bizId);
 
     /**
@@ -271,10 +271,10 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @POST("api/biz/lawyerConsult/closeQuestion")
+    @POST("wmapi/biz/lawyerConsult/closeQuestion")
     Observable<BaseData<Boolean>> closeLawConsultAnswer(@Query("id") String id);
 
-    @GET("api/biz/lawyerConsult/getStableInfoNum")
+    @GET("wmapi/biz/lawyerConsult/getStableInfoNum")
     Observable<BaseData<LawCountEntity>> getLawCount();
 
     /**
@@ -283,7 +283,7 @@ public interface AllApi {
      * @param question
      * @return
      */
-    @POST("api/biz/lawyerConsult/add")
+    @POST("wmapi/biz/lawyerConsult/add")
     Observable<BaseData<Boolean>> addMyLawConsult(@Query("question") String question);
 
     /**
@@ -292,7 +292,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/lawService/page")
+    @POST("wmapi/biz/lawService/page")
     Observable<BaseData<PageData<LawFirmEntity>>> loadLawFirmList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -301,7 +301,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/policeunit/page")
+    @POST("wmapi/biz/policeunit/page")
     Observable<BaseData<PageData<PoliceStationEntity>>> loadPoliceStationList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -310,7 +310,7 @@ public interface AllApi {
      * @param vo
      * @return
      */
-    @POST("api/biz/callrecord/save")
+    @POST("wmapi/biz/callrecord/save")
     Observable<BaseData<Boolean>> submitPoliceCallRecord(@Body PoliceStationRecordEntity vo);
 
     /**
@@ -319,7 +319,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/bmInformation/page")
+    @POST("wmapi/biz/bmInformation/page")
     Observable<BaseData<PageData<ConvenienceQueryEntity>>> loadConvenienceQueryList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -328,7 +328,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/lawActivity/page")
+    @POST("wmapi/biz/lawActivity/page")
     Observable<BaseData<PageData<LawActivityBean>>> loadLawActivityList(@Body PageReq<String> pageParam);
 
     /**
@@ -337,7 +337,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/party/payment/findList")
+    @POST("wmapi/biz/party/payment/findList")
     Observable<BaseData<PageData<PartyPayInfoEntity>>> loadDJUnpaidList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -346,7 +346,7 @@ public interface AllApi {
      * @param commParam
      * @return
      */
-    @POST("api/biz/party/payment/updatePayState")
+    @POST("wmapi/biz/party/payment/updatePayState")
     Observable<BaseData<String>> updatePartyPayStatus(@Body CommReq commParam);
 
     /**
@@ -355,8 +355,9 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/wechat/get/material")
-    Observable<BaseData<PageData<WechatEntity>>> loadPropagandaListData(@Body PageReq<WechatParam> pageParam);
+    // @POST("api/biz/wechat/get/material")/systemset/page
+    @POST("wmapi/biz//systemset/page")
+    Observable<BaseData<PageData<WechatEntity>>> loadPropagandaListData(@Body PageReq<String> pageParam);
 
     /**
      * 助民 > 心愿清单
@@ -364,7 +365,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/wishAppMana/page")
+    @POST("wmapi/biz/wishAppMana/page")
     Observable<BaseData<PageData<WishEntity>>> loadWishList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -373,7 +374,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/question/page")
+    @POST("wmapi/biz/question/page")
     Observable<BaseData<PageData<HouseDocQAEntity>>> loadHouseDocQAList(@Body PageReq pageParam);
 
     /**
@@ -381,7 +382,7 @@ public interface AllApi {
      *
      * @return
      */
-    @GET("api/biz/doctor/getById")
+    @GET("wmapi/biz/doctor/getById")
     Observable<BaseData<HomeDocInfoEntity>> loadHomeDocDetail(@Query("id") String bizId);
 
     /**
@@ -390,7 +391,7 @@ public interface AllApi {
      * @param question
      * @return
      */
-    @GET("api/biz/consult/add")
+    @GET("wmapi/biz/consult/add")
     Observable<BaseData<Boolean>> addMyDocConsult(@Query("question") String question);
 
     /**
@@ -399,7 +400,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/consult/getMyConsult")
+    @POST("wmapi/biz/consult/getMyConsult")
     Observable<BaseData<PageData<HouseDocQAEntity>>> loadHouseDocQAHistoryList(@Body PageReq<String> pageParam);
 
     /**
@@ -407,7 +408,7 @@ public interface AllApi {
      *
      * @return
      */
-    @GET("api/biz/doctor/getOnlineDoc")
+    @GET("wmapi/biz/doctor/getOnlineDoc")
     Observable<BaseData<ArrayList<BizUserEntity>>> loadOnlineDocList();
 
 
@@ -417,7 +418,7 @@ public interface AllApi {
      * @param vo
      * @return
      */
-    @POST("api/biz/wishcountapp/find")
+    @POST("wmapi/biz/wishcountapp/find")
     Observable<BaseData<CommResult>> loadWishTotal(@Body CommReq vo);
 
     /**
@@ -426,7 +427,7 @@ public interface AllApi {
      * @param vo
      * @return
      */
-    @POST("api/biz/wishAppMana/save")
+    @POST("wmapi/biz/wishAppMana/save")
     Observable<BaseData<Boolean>> publicWish(@Body CommReq vo);
 
     /**
@@ -435,7 +436,7 @@ public interface AllApi {
      * @param vo
      * @return
      */
-    @POST("api/biz/wishAppMana/getWish")
+    @POST("wmapi/biz/wishAppMana/getWish")
     Observable<BaseData<WishEntity>> loadWishDetails(@Body CommReq vo);
 
     /**
@@ -444,7 +445,7 @@ public interface AllApi {
      * @param vo
      * @return
      */
-    @POST("api/biz/wishAppMana/updateByClaim")
+    @POST("wmapi/biz/wishAppMana/updateByClaim")
     Observable<BaseData<Boolean>> claimWish(@Body CommReq vo);
 
     /**
@@ -453,7 +454,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/raisingApp/get")
+    @GET("wmapi/biz/raisingApp/get")
     Observable<BaseData<LoveHeartEntity>> loadLoveHeartDetails(@Query("id") String id);
 
     /**
@@ -462,7 +463,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/raisingApp/page")
+    @POST("wmapi/biz/raisingApp/page")
     Observable<BaseData<PageData<LoveHeartEntity>>> loadLoveHeartList(@Body PageReq<String> pageParam);
 
     /**
@@ -471,7 +472,7 @@ public interface AllApi {
      * @param parentId
      * @return
      */
-    @GET("api/admin/area/find")
+    @GET("wmapi/admin/area/find")
     Observable<BaseData<ArrayList<AreaDTO>>> loadTownList(@Query("parentId") String parentId);
 
     /**
@@ -480,7 +481,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/lawyerConsultAnswer/getById")
+    @GET("wmapi/biz/lawyerConsultAnswer/getById")
     Observable<BaseData<LawQuestionDetailsBean>> getConsultAnswerDetailsById(@Query("id") String id);
 
     /**
@@ -489,7 +490,7 @@ public interface AllApi {
      * @param answer
      * @return
      */
-    @POST("api/biz/lawyerConsultAnswer/add")
+    @POST("wmapi/biz/lawyerConsultAnswer/add")
     Observable<BaseData<Boolean>> addLawQuestionReply(@Body CommReq answer);
 
 
@@ -499,7 +500,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/consultAnswer/getById")
+    @GET("wmapi/biz/consultAnswer/getById")
     Observable<BaseData<DocQADetailsEntity>> getDocConsultAnswerDetailsById(@Query("id") String id);
 
     /**
@@ -508,7 +509,7 @@ public interface AllApi {
      * @param answer
      * @return
      */
-    @POST("api/biz/consultAnswer/add")
+    @POST("wmapi/biz/consultAnswer/add")
     Observable<BaseData<Boolean>> addDocQuestionReply(@Body CommReq answer);
 
     /**
@@ -517,7 +518,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @POST("api/biz/consult/closeQuestion")
+    @POST("wmapi/biz/consult/closeQuestion")
     Observable<BaseData<Boolean>> closeDocConsultAnswer(@Query("id") String id);
 
     /**
@@ -526,7 +527,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/systemset/page")
+    @POST("wmapi/biz/systemset/page")
     Observable<BaseData<PageData<BannerEntity>>> loadHomeBannerInfo(@Body PageReq<String> pageParam);
 
     /**
@@ -535,7 +536,7 @@ public interface AllApi {
      * @param typeCode
      * @return
      */
-    @GET("api/admin/dictionary/findDictionary")
+    @GET("wmapi/admin/dictionary/findDictionary")
     Observable<BaseData<Map<String, Map<String, String>>>> loadDictionary(@Query("typeCode[]") String[] typeCode);
 
     /**
@@ -543,7 +544,7 @@ public interface AllApi {
      *
      * @return
      */
-    @GET("api/biz/appointment/gettake")
+    @GET("wmapi/biz/appointment/gettake")
     Observable<BaseData<ArrayList<OrderTakeFileEntity>>> loadOrderTakeFileList(@Query("status") int status);
 
     /**
@@ -552,7 +553,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/lawActivity/getById")
+    @GET("wmapi/biz/lawActivity/getById")
     Observable<BaseData<LawActivityBean>> getLawActivityById(@Query("id") String id);
 
     /**
@@ -560,13 +561,13 @@ public interface AllApi {
      *
      * @return
      */
-    @GET("api/admin/area/find")
+    @GET("wmapi/admin/area/find")
     Observable<BaseData<ArrayList<AreaDTO>>> loadCommunitiesByStreetId(@Query("parentId") String parentId);
 
-    @POST("api/biz/wmUser/reset/password/captcha/check")
+    @POST("wmapi/biz/wmUser/reset/password/captcha/check")
     Observable<BaseData<String>> findPwdShortMsgCheck(@Query("phone") String phone, @Query("captcha") String captcha);
 
-    @GET("api/biz/lawyer/getOnlineLaywer")
+    @GET("wmapi/biz/lawyer/getOnlineLaywer")
     Observable<BaseData<ArrayList<BizUserEntity>>> getOnlineLawyer();
 
     /**
@@ -574,7 +575,7 @@ public interface AllApi {
      *
      * @return
      */
-    @GET("api/biz/clientVersion/getLastVersionInfo")
+    @GET("wmapi/biz/clientVersion/getLastVersionInfo")
     Observable<BaseData<VersionEntity>> getLastVersionInfo(@Query("pversion") String pVersion);
 
     /**
@@ -593,7 +594,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/clientVersion/addUpdataOne")
+    @GET("wmapi/biz/clientVersion/addUpdataOne")
     Observable<BaseData<Boolean>> updateDownLoadNum(@Query("id") String id);
 
     /**
@@ -602,7 +603,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/Meeeting/page")
+    @POST("wmapi/biz/Meeeting/page")
     Observable<BaseData<PageData<ThreeMeetEntity>>> loadMeetForAllList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -611,13 +612,13 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/Meeeting/page")
+    @POST("wmapi/biz/Meeeting/page")
     Observable<BaseData<PageData<ThreeMeetEntity>>> loadMeetForMeList(@Body PageReq<CommReq> pageParam);
 
-    @GET("api/biz/Meeeting/get")
+    @GET("wmapi/biz/Meeeting/get")
     Observable<BaseData<DjThreeMeetInfoDTO>> loadMeetDetails(@Query("id") String id);
 
-    @GET("api/biz/Meeeting/leave")
+    @GET("wmapi/biz/Meeeting/leave")
     Observable<BaseData<Boolean>> leaveMeet(@Query("meetId") String meetId, @Query("leaveReason") String leaveReason);
 
     /**
@@ -627,7 +628,7 @@ public interface AllApi {
      * @param signAddr
      * @return
      */
-    @GET("api/biz/Meeeting/signIn")
+    @GET("wmapi/biz/Meeeting/signIn")
     Observable<BaseData<Boolean>> attendMeet(@Query("meetId") String meetId, @Query("signAddr") String signAddr);
 
     // ===================================================================
@@ -638,7 +639,7 @@ public interface AllApi {
      * @param vo
      * @return
      */
-    @POST("api/biz/bmShotQuestion/save")
+    @POST("wmapi/biz/bmShotQuestion/save")
     Observable<BaseData<Boolean>> submitPhotosCreatorInfo(@Body PhotosCreatorVo vo);
 
     /**
@@ -647,7 +648,7 @@ public interface AllApi {
      * @param vo
      * @return
      */
-    @POST("api/biz/bmShotQuestion/workSceneDeal")
+    @POST("wmapi/biz/bmShotQuestion/workSceneDeal")
     Observable<BaseData<Boolean>> submitPhotosHandle(@Body PhotosCreatorVo vo);
 
     /**
@@ -657,7 +658,7 @@ public interface AllApi {
      * @param evaluateStar
      * @return
      */
-    @GET("api/biz/bmShotQuestion/evaluate")
+    @GET("wmapi/biz/bmShotQuestion/evaluate")
     Observable<BaseData<Boolean>> bmShotQuestionEvaluate(@Query("qid") String qid, @Query("evaluateStar") String evaluateStar);
 
     /**
@@ -666,7 +667,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/bmShotQuestion/page")
+    @POST("wmapi/biz/bmShotQuestion/page")
     Observable<BaseData<PageData<PhotoShotEntity>>> loadMyAllShotPhotoList(@Body PageReq<PhotosCreatorVo> pageParam);
 
     /**
@@ -675,7 +676,7 @@ public interface AllApi {
      * @param location
      * @return
      */
-    @POST("api/biz/bmShotQuestion/saveUpPlace")
+    @POST("wmapi/biz/bmShotQuestion/saveUpPlace")
     Observable<BaseData<Boolean>> uploadLocationInfo(@Body LocationEntity location);
 
     /**
@@ -684,10 +685,10 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/bmShotQuestion/get")
+    @GET("wmapi/biz/bmShotQuestion/get")
     Observable<BaseData<BmShotQuestionInfoDTO>> loadShotPhotoDetail(@Query("id") String id);
 
-    @GET("api/admin/dictionary/getChild")
+    @GET("wmapi/admin/dictionary/getChild")
     Observable<BaseData<ArrayList<DictionaryEntity>>> loadDictionaryChild(@Query("code") String code);
 
     /**
@@ -696,7 +697,7 @@ public interface AllApi {
      * @param impeach
      * @return
      */
-    @POST("api/biz/amNetLetter/save")
+    @POST("wmapi/biz/amNetLetter/save")
     Observable<BaseData<ImpeachEntity>> createImpeach(@Body ImpeachEntity impeach);
 
     /**
@@ -705,13 +706,13 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/amNetLetter/page")
+    @POST("wmapi/biz/amNetLetter/page")
     Observable<BaseData<PageData<ImpeachEntity>>> loadImpeachList(@Body PageReq<ImpeachEntity> pageParam);
 
-    @GET("api/biz/amNetLetter/get/{id}")
+    @GET("wmapi/biz/amNetLetter/get/{id}")
     Observable<BaseData<ImpeachEntity>> loadImpeach(@Path("id") String id);
 
-    @GET("api/biz/bmShotQuestion/manEnterRoom")
+    @GET("wmapi/biz/bmShotQuestion/manEnterRoom")
     Observable<BaseData<String>> loadingVideoUrl();
 
     /**
@@ -720,7 +721,7 @@ public interface AllApi {
      * @param impeach
      * @return
      */
-    @POST("api/biz/amComplaintAdvice/save")
+    @POST("wmapi/biz/amComplaintAdvice/save")
     Observable<BaseData<ComplaintEntity>> createComplaint(@Body ComplaintEntity impeach);
 
     /**
@@ -729,7 +730,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/amComplaintAdvice/page")
+    @POST("wmapi/biz/amComplaintAdvice/page")
     Observable<BaseData<PageData<ComplaintEntity>>> loadComplaintList(@Body PageReq<ComplaintEntity> pageParam);
 
     /**
@@ -738,7 +739,7 @@ public interface AllApi {
      * @param id
      * @return
      */
-    @GET("api/biz/amComplaintAdvice/{id}")
+    @GET("wmapi/biz/amComplaintAdvice/{id}")
     Observable<BaseData<ComplaintEntity>> loadComplaintDetail(@Path("id") String id);
 
     /**
@@ -747,7 +748,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/djRulesParty/page")
+    @POST("wmapi/biz/djRulesParty/page")
     Observable<BaseData<PageData<DWOpenListEntity>>> loadDWOpenAllList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -756,7 +757,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/msgs/msgsCenterInfo/page")
+    @POST("wmapi/msgs/msgsCenterInfo/page")
     Observable<BaseData<PageData<NoticeMsgEntity>>> loadNoticeMsgList(@Body PageReq pageParam);
 
     /**
@@ -765,7 +766,7 @@ public interface AllApi {
      * @param ids
      * @return
      */
-    @POST("api/msgs/msgsCenterInfo/mark")
+    @POST("wmapi/msgs/msgsCenterInfo/mark")
     Observable<BaseData<Boolean>> loadNoticeMsgStatus(@Query("receivedIdList[]") ArrayList<String> ids);
 
     /**
@@ -774,7 +775,7 @@ public interface AllApi {
      * @param userId
      * @return
      */
-    @GET("api/msgs/msgsCenterInfo/get/pull/msgs")
+    @GET("wmapi/msgs/msgsCenterInfo/get/pull/msgs")
     Observable<BaseData<NoticeTipEntity>> loadSysNotice(@Query("userId") String userId);
 
     /**
@@ -837,7 +838,7 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/fgTrainJob/page")
+    @POST("wmapi/biz/fgTrainJob/page")
     Observable<BaseData<PageData<TrainEmploymentEntity>>> loadPxJyList(@Body PageReq<CommReq> pageParam);
 
     /**
@@ -846,6 +847,6 @@ public interface AllApi {
      * @param pageParam
      * @return
      */
-    @POST("api/biz/fgRenting/page")
+    @POST("wmapi/biz/fgRenting/page")
     Observable<BaseData<PageData<FgRentingEntity>>> loadFgRentingList(@Body PageReq<CommReq> pageParam);
 }

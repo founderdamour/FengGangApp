@@ -55,15 +55,15 @@ class PropagandaSysListActivity : LoadingRecyclerViewBaseActivity(), AndroidView
     }
 
     override fun loadData(pageNo: Int) {
-        val pageParam = PageReq<WechatParam>()
+        val pageParam = PageReq<String>()
         pageParam.pageNo = pageNo
         pageParam.pageSize = 3
 
-        val vo = WechatParam()
+        /*val vo = WechatParam()
         vo.count = 0
         vo.offset = 0
-        vo.type = "news"
-        pageParam.data = vo
+        vo.type = "news"*/
+        pageParam.data = ""
 
         presenter?.loadPropagandaListData(pageParam)
     }

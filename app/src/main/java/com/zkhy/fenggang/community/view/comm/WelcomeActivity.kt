@@ -17,8 +17,8 @@ class WelcomeActivity : AppCompatActivity() {
 
         when (Random().nextInt(3)) {
             0 -> launchIv.setImageResource(R.drawable.launch)
-            1 -> launchIv.setImageResource(R.drawable.launch1)
-            else -> launchIv.setImageResource(R.drawable.launch2)
+            1 -> launchIv.setImageResource(R.drawable.launch)
+            else -> launchIv.setImageResource(R.drawable.launch)
         }
 
         Handler().postDelayed({

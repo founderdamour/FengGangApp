@@ -47,6 +47,8 @@ public class WechatEntity implements Serializable {
      */
     private String thumbUrl;
 
+    private String openUrl;
+
 
     private Integer totalCount;
 
@@ -130,5 +132,13 @@ public class WechatEntity implements Serializable {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getOpenUrl() {
+        return openUrl;
+    }
+
+    public void setOpenUrl(String openUrl) {
+        this.openUrl = openUrl;
     }
 }

@@ -89,16 +89,16 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
 //        pageReq.pageNo = 1
 //        pageReq.pageSize = 10
 //        presenter?.loadHomeBannerInfo(pageReq)
-        val pageParam = PageReq<WechatParam>()
-        pageParam.pageNo = 1
-        pageParam.pageSize = 1
+        val pageParam = PageReq<String>()
+        pageParam.pageNo = 0
+        pageParam.pageSize = 0
 
-        val vo = WechatParam()
+        /*val vo = WechatParam()
         vo.count = 0
         vo.offset = 0
         vo.type = "news"
-        vo.isFromApp = true
-        pageParam.data = vo
+        vo.isFromApp = true*/
+        pageParam.data = ""
 
         presenter2?.loadPropagandaListData(pageParam)
 
@@ -172,7 +172,7 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
                 val pos: WechatEntity = result.data.list[index]
 
                 if (StringUtil.isNotEmpty(pos.url)) {
-                    netDataList.add(BannerBean(pos.title, pos.thumbUrl, pos.url))
+                    netDataList.add(BannerBean(pos.title, pos.url,pos.openUrl))
                 }
 
                // noticeList.add(pos.title)

@@ -87,7 +87,7 @@ class DJPresenter(private val view: AndroidView) {
             })
     }
 
-    fun loadPropagandaListData(pageParam: PageReq<WechatParam>) {
+    fun loadPropagandaListData(pageParam: PageReq<String>) {
         RxRetrofit.init(ServerConfig.baseUrl, ServerConfig.getHeaderMap())
             .create<AllApi>(AllApi::class.java)
             .loadPropagandaListData(pageParam)

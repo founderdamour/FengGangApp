@@ -167,12 +167,10 @@ class AmPoliceStationMapActivity : MapViewBaseActivity(), AndroidExt2View {
             val phone1: String = listData[0].telephone
             val phone2: String = listData[0].phone
 
-            val phone: String = if (StringUtil.isNotEmpty(phone2)) {
-                phone2
-            } else if (StringUtil.isNotEmpty(phone1)) {
-                phone1
-            } else {
-                ""
+            val phone: String = when {
+                StringUtil.isNotEmpty(phone2) -> phone2
+                StringUtil.isNotEmpty(phone1) -> phone1
+                else -> ""
             }
 
             policeStationName = name

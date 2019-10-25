@@ -335,9 +335,12 @@
 
         <!-- ============================= 百度 ==================================== -->
         <!-- 开发者申请的key -->
+        <!--<meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="acb5cff7ae68e01ca5935ee53e0bcb8f" />-->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="acb5cff7ae68e01ca5935ee53e0bcb8f" />
+            android:value="6c91ddd20eb8b6feb0a463f0946bbd24" />
         <!-- 定位需要的服务 -->
         <service android:name="com.amap.api.location.APSService" />
 

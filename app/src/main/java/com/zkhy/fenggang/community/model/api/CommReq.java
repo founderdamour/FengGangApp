@@ -138,6 +138,8 @@ public class CommReq {
      */
     private int type;
 
+    private int publisState;
+
     public String getOpenPartyType() {
         return openPartyType;
     }
@@ -602,5 +604,13 @@ public class CommReq {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public int getPublisState() {
+        return publisState;
+    }
+
+    public void setPublisState(int publisState) {
+        this.publisState = publisState;
     }
 }

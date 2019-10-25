@@ -66,6 +66,7 @@ class FgRentingListActivity : StatusViewRecycleViewBaseActivity(), AndroidExt2Vi
         pageParam.pageSize = 20
 
         val commReq = CommReq()
+        commReq.publisState = 1
         pageParam.data = commReq
 
         presenter!!.loadFgRentingList(pageParam)

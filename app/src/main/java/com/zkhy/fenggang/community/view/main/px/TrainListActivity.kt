@@ -68,6 +68,7 @@ class TrainListActivity : StatusViewRecycleViewBaseActivity(), AndroidExt2View {
 
         val commReq = CommReq()
         commReq.type = 1
+        commReq.publisState = 1
         pageParam.data = commReq
 
         presenter!!.loadPxJyList(pageParam)

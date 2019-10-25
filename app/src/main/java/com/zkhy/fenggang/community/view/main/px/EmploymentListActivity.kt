@@ -47,9 +47,9 @@ class EmploymentListActivity : StatusViewRecycleViewBaseActivity(), AndroidExt2V
             }
 
             IntentUtil.openActivity(this@EmploymentListActivity, TrainEmploymentDetailActivity::class.java)
-                    .putIntExtra("px", 1)
-                    .putSerializableExtra("entity", entity)
-                    .start()
+                .putIntExtra("px", 1)
+                .putSerializableExtra("entity", entity)
+                .start()
         })
         presenter = PXPresenter(this)
 
@@ -68,6 +68,7 @@ class EmploymentListActivity : StatusViewRecycleViewBaseActivity(), AndroidExt2V
 
         val commReq = CommReq()
         commReq.type = 2
+        commReq.publisState = 1
         pageParam.data = commReq
 
         presenter!!.loadPxJyList(pageParam)

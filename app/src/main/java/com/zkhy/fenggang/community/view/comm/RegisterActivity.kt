@@ -5,12 +5,12 @@ import android.os.CountDownTimer
 import android.text.TextUtils
 import com.sinothk.comm.utils.StringUtil
 import com.sinothk.comm.utils.ToastUtil
-import com.sinothk.dialog.loading.LoadingDialog
 import com.zkhy.fenggang.community.R
 import com.zkhy.fenggang.community.model.api.BaseData
 import com.zkhy.fenggang.community.model.api.CommReq
 import com.zkhy.fenggang.community.model.bean.RegisterEntity
 import com.zkhy.fenggang.community.presenter.UserPresenter
+import com.zkhy.fenggang.community.widget.LoadingDialog
 import com.zkhy.library.base.activity.TitleBarBaseActivity
 import com.zkhy.library.mvp.AndroidExt2View
 import com.zkhy.library.utils.CommUtil
@@ -111,7 +111,7 @@ class RegisterActivity : TitleBarBaseActivity(), AndroidExt2View {
     }
 
     override fun loadingShow() {
-        LoadingDialog.show(this, "正在登录")
+        LoadingDialog.show(this, "",false)
     }
 
     override fun loadingDismiss() {

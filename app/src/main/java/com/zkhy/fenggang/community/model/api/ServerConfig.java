@@ -16,8 +16,8 @@ import java.util.HashMap;
  */
 public class ServerConfig {
 
-//    public static String baseUrl = "http://112.74.58.200:10086/"; // 正式
-    public static String baseUrl = "http://58.16.181.23:10086/"; // 测试
+    public static String baseUrl = "http://116.171.0.100:10086/"; // 正式
+    //public static String baseUrl = "http://58.16.181.23:10086/"; // 测试
 
     public static String mkUrl = "http://218.201.212.134/"; // 煤矿系统
 

@@ -140,12 +140,15 @@ class UserPresenter(private val view: AndroidExt2View) : CommPresenter(view) {
             .subscribe(object : Subscriber<BaseData<String>>() {
 
                 override fun onStart() {
+                    view.loadingShow()
                 }
 
                 override fun onCompleted() {
+                    view.loadingDismiss()
                 }
 
                 override fun onError(e: Throwable) {
+                    view.loadingDismiss()
                     e.printStackTrace()
                 }
 

@@ -30,6 +30,7 @@ public class PoliceStationEntity {
     private String telephone;
     private double officeLon;
     private double officeLat;
+    private String linkPerson;
 
     public String getAddr() {
         return addr;
@@ -101,5 +102,13 @@ public class PoliceStationEntity {
 
     public void setOfficeLat(double officeLat) {
         this.officeLat = officeLat;
+    }
+
+    public String getLinkPerson() {
+        return linkPerson;
+    }
+
+    public void setLinkPerson(String linkPerson) {
+        this.linkPerson = linkPerson;
     }
 }

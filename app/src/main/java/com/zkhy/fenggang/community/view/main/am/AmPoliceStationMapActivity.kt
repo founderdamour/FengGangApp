@@ -133,7 +133,7 @@ class AmPoliceStationMapActivity : MapViewBaseActivity(), AndroidExt2View {
                 val multiPoint = MultiPointItem(LatLng(entity.officeLat, entity.officeLon))
                 multiPoint.title = entity.officeName
                 multiPoint.snippet = entity.addr
-                multiPoint.`object` = "警员"
+                multiPoint.`object` = entity.linkPerson
 
                 if (StringUtil.isNotEmpty(entity.telephone) || StringUtil.isNotEmpty(entity.phone)) {
 

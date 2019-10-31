@@ -103,7 +103,8 @@
         android:id="@+id/noticeItem"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/noticeIconIv"

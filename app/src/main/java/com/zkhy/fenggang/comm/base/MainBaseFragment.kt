@@ -102,7 +102,7 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
 
         presenter2?.loadPropagandaListData(pageParam)
 
-        val pageParam1 = PageReq<CommReq>()
+        /*val pageParam1 = PageReq<CommReq>()
         pageParam1.pageNo = 1
         pageParam1.pageSize = 3
 
@@ -111,7 +111,7 @@ abstract class MainBaseFragment : Fragment(), View.OnClickListener, AndroidExt2V
         comm.basicSystemType = "OPEN_PARTY_AFFAIRS"
 
         pageParam1.data = comm
-        dwOpenPresenter!!.loadDWOpenAllList(pageParam1)
+        dwOpenPresenter!!.loadDWOpenAllList(pageParam1)*/
 
 
         val bannerList: ArrayList<BannerBean>? = DataCache.getHomeBannerInfo()
